@@ -2,6 +2,8 @@
 
 import UIKit
 
+//Find out the number of times 2 vowels appear next to each other 
+
 var str = "Hello, playground"
 
 var word = "cheese"

@@ -9,7 +9,8 @@ func createFrequencyDictionary (word: String)-> ([String: Int]){
     var dictionary = [String: Int]()
     for singleLetter in word.characters{
         var value = 0
-        if dictionary.contains(where: singleLetter){
+        var stringSingleLetter = String(singleLetter)
+        if dictionary[stringSingleLetter] == nil {
             value = dictionary[String(singleLetter)]!
             value = value + 1
         }
@@ -36,6 +37,8 @@ func findPermutations(stringOne: String, stringTwo: String) -> Bool{
             isPermutation = false
         }
     }
-
     return isPermutation
 }
+var stringOne = "ate"
+var stringTwo = "eat"
+

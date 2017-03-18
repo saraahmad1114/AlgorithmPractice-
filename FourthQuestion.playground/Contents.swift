@@ -29,8 +29,8 @@ func findPermutations(stringOne: String, stringTwo: String) -> Bool{
     }
     else {
         var stringOneDictionary = createFrequencyDictionary(word: stringOne)
-        var stringTwoDictionyar = createFrequencyDictionary(word: stringTwo)
-        if stringOneDictionary == stringTwoDictionyar{
+        var stringTwoDictionary = createFrequencyDictionary(word: stringTwo)
+        if stringOneDictionary == stringTwoDictionary{
             isPermutation = true
         }
         else {
@@ -39,6 +39,9 @@ func findPermutations(stringOne: String, stringTwo: String) -> Bool{
     }
     return isPermutation
 }
+
+
 var stringOne = "ate"
 var stringTwo = "eat"
+
 

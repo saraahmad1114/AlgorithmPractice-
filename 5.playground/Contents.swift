@@ -8,3 +8,19 @@ var str = "Hello, playground"
 
 //input: "Mr. John Smith "
 //ouput: "Mr.%20John%20Smith"
+
+func replaceSpacesWithString(string: String)-> String{
+
+    var newString = string
+    
+    if newString.characters.last == " "{
+        newString.characters.removeLast()
+        newString = newString.replacingOccurrences(of: " ", with: "%20")
+    }
+    else{
+        newString = newString.replacingOccurrences(of: " ", with: "%20")
+    }
+    print(newString)
+    return newString
+}
+replaceSpacesWithString(string: "Mr. John Smith ")

@@ -15,11 +15,12 @@ func ifPermutationOfPalindrome(firstString: String, secondString: String)-> Bool
     
     if newFirstString == reversedVersion
     {
-        
+        //create a dictionary to see if the dictionaries are the same, then you have
     }
     else{
-        print("\(firstString) is not a palindrome")
+        isPermutationOfPalindrome = false
+        //print("\(firstString) is not a palindrome")
     }
 
-    return true
+    return isPermutationOfPalindrome
 }

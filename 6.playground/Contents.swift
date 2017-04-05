@@ -31,7 +31,11 @@ func ifPermutationOfPalindrome(firstString: String, secondString: String)-> Bool
     
     if newFirstString == reversedVersion
     {
-        
+        var firstStringDictionary = createFrequencyDictionary(word: firstString)
+        var secondStringDictionary = createFrequencyDictionary(word: secondString)
+        if firstStringDictionary == secondStringDictionary{
+            isPermutationOfPalindrome = true 
+        }
     }
     else{
         isPermutationOfPalindrome = false

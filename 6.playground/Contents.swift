@@ -34,13 +34,15 @@ func ifPermutationOfPalindrome(firstString: String, secondString: String)-> Bool
         var firstStringDictionary = createFrequencyDictionary(word: firstString)
         var secondStringDictionary = createFrequencyDictionary(word: secondString)
         if firstStringDictionary == secondStringDictionary{
-            isPermutationOfPalindrome = true 
+            isPermutationOfPalindrome = true
         }
     }
     else{
         isPermutationOfPalindrome = false
         //print("\(firstString) is not a palindrome")
     }
-
     return isPermutationOfPalindrome
 }
+
+
+

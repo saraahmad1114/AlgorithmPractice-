@@ -22,15 +22,40 @@ func hasCharacterBeenInserted(firstString: String, secondString: String) -> Bool
     return characterBeenInserted
 }
 
+func createFrequencyDictionary (word: String)-> ([String: Int]){
+    var dictionary = [String: Int]()
+    for singleLetter in word.characters{
+        var value = 0
+        var stringSingleLetter = String(singleLetter)
+        if dictionary[stringSingleLetter] == nil {
+            value = dictionary[String(singleLetter)]!
+            value = value + 1
+        }
+        else{
+            value = 1
+        }
+    }
+    return dictionary
+}
+
 hasCharacterBeenInserted(firstString: "pale", secondString: "pales")
 
 func hasCharacterBeenRemoved(firstString: String, secondString: String) -> Bool{
 
     var characterBeenRemoved = true
+    var counter = 0
     
-
+    var firstDictionary = createFrequencyDictionary(word: firstString)
+    var secondDictionary = createFrequencyDictionary(word: secondString)
+    for (key, value) in firstDictionary{
+        if secondDictionary.contains(where: key){
+            counter = counter +1
+        }
+    }
+    
+    
     return characterBeenRemoved
 }
 
-hasCharacterBeenRemoved(firstString: "pale", secondString: "ple")
+
 

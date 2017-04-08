@@ -22,5 +22,22 @@ func hasCharacterBeenInserted(firstString: String, secondString: String) -> Bool
     return characterBeenInserted
 }
 
-
 hasCharacterBeenInserted(firstString: "pale", secondString: "pales")
+
+func hasCharacterBeenRemoved(firstString: String, secondString: String) -> Bool{
+
+    var characterBeenRemoved: Bool = true
+    if firstString.contains(secondString){
+        if secondString.characters.count+1 == firstString.characters.count{
+            characterBeenRemoved = true
+        }
+    }
+    else{
+        characterBeenRemoved = false
+    }
+
+    return characterBeenRemoved
+}
+
+hasCharacterBeenInserted(firstString: "pale", secondString: "ple")
+

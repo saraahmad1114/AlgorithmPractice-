@@ -44,18 +44,30 @@ func hasCharacterBeenRemoved(firstString: String, secondString: String) -> Bool{
 
     var characterBeenRemoved = true
     var counter = 0
-    
-    var firstDictionary = createFrequencyDictionary(word: firstString)
-    var secondDictionary = createFrequencyDictionary(word: secondString)
-    for (key, value) in firstDictionary{
-        if secondDictionary.contains(where: key){
-            counter = counter +1
+
+    var firstStringArray = [String(firstString.characters)]
+    var secondStringArray = [String(secondString.characters)]
+
+    for i in 0..<firstStringArray.count{
+        
+        let currentChar = String(secondString[secondString.index(secondString.startIndex, offsetBy: i)])
+        
+        if firstStringArray[i] == currentChar {
+            counter = counter + 1
         }
     }
     
-    
+    if firstStringArray.count == counter + 1{
+        characterBeenRemoved = true
+    }
+    else{
+        characterBeenRemoved = false
+    }
     return characterBeenRemoved
 }
+
+hasCharacterBeenRemoved(firstString: "pale", secondString: "ple")
+
 
 
 

@@ -6,13 +6,13 @@ var str = "Hello, playground"
 
 //Question: There are three types of edits that can be performed on strings; insert a character, remove a character, or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away. 
 
-//another character has been inserted -- insert a character 
+//another character has been inserted
 
 func hasCharacterBeenInserted(firstString: String, secondString: String) -> Bool{
 
     var characterBeenInserted: Bool = true
-    if secondString.contains(firstString){
-        if firstString.characters.count+1 == secondString.characters.count{
+    if secondString.contains(firstString) || firstString.contains(secondString){
+        if firstString.characters.count+1 == secondString.characters.count || secondString.characters.count+1 == firstString.characters.count{
             characterBeenInserted = true
         }
     }
@@ -22,23 +22,9 @@ func hasCharacterBeenInserted(firstString: String, secondString: String) -> Bool
     return characterBeenInserted
 }
 
-func createFrequencyDictionary (word: String)-> ([String: Int]){
-    var dictionary = [String: Int]()
-    for singleLetter in word.characters{
-        var value = 0
-        var stringSingleLetter = String(singleLetter)
-        if dictionary[stringSingleLetter] == nil {
-            value = dictionary[String(singleLetter)]!
-            value = value + 1
-        }
-        else{
-            value = 1
-        }
-    }
-    return dictionary
-}
-
 hasCharacterBeenInserted(firstString: "pale", secondString: "pales")
+
+//character has been removed
 
 func hasCharacterBeenRemoved(firstString: String, secondString: String) -> Bool{
 
@@ -46,7 +32,6 @@ func hasCharacterBeenRemoved(firstString: String, secondString: String) -> Bool{
     var counter = 0
 
     var firstStringArray = [String(firstString.characters)]
-    var secondStringArray = [String(secondString.characters)]
 
     for i in 0..<firstStringArray.count{
         
@@ -57,7 +42,7 @@ func hasCharacterBeenRemoved(firstString: String, secondString: String) -> Bool{
         }
     }
     
-    if firstStringArray.count == counter + 1{
+    if firstStringArray.count == counter + 1 || secondString.characters.count == counter + 1{
         characterBeenRemoved = true
     }
     else{
@@ -66,7 +51,16 @@ func hasCharacterBeenRemoved(firstString: String, secondString: String) -> Bool{
     return characterBeenRemoved
 }
 
-hasCharacterBeenRemoved(firstString: "pale", secondString: "ple")
+hasCharacterBeenRemoved(firstString: "back", secondString: "bck")
+
+func hasCharacterBeenReplaced(firstString: String, secondString: String) -> Bool{
+
+    var characterBeenReplaced = true
+    
+    
+    
+    return characterBeenReplaced
+}
 
 
 

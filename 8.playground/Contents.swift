@@ -7,11 +7,37 @@ var str = "Hello, playground"
 
 //Create a dictionary and concatenate the contents to a single string
 
-func createACompressedString(givenString: String) -> String{
-
-
-
-
-
-    return "happy"
+func stringCompression(givenString: String) -> String {
+    
+    if givenString.characters.count < 2 {
+        return givenString
+    }
+    else{
+    
+    var compressedString = ""
+    var start = String(givenString[givenString.startIndex])
+    var counter = 1
+    
+    for i in 0..<givenString.characters.count {
+        
+        let currentLetter = String(givenString[givenString.index(givenString.startIndex, offsetBy: i)])
+        
+        if currentLetter == start {
+            counter = counter + 1
+        } else {
+            compressedString += "\(start)\(counter)"
+            start = currentLetter
+            counter = 1
+        }
+    }
+    
+    if compressedString.characters.count < givenString.characters.count {
+        return compressedString
+    }
+    else{
+        return givenString
+    }
+    }
 }
+
+stringCompression(givenString: "aabcccccaaa")

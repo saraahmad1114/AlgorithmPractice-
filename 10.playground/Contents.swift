@@ -3,7 +3,3 @@
 import UIKit
 
 var str = "Hello, playground"
-
-//Example of Merge Sort 
-
-

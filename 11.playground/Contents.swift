@@ -30,8 +30,8 @@ class Node : CustomStringConvertible{
 }
 
 
-//function to remove the nodes 
-func removeDups(head: Node?) -> Node? {
+//function to remove the nodes
+func removeDuplicates(head: Node?) -> Node? {
     
     var current = head
     var stableNode = head
@@ -64,6 +64,6 @@ for i in 0..<30 {
 }
 
 print(h)
-
-print(removeDups(head: h))
+print("****************************")
+print(removeDuplicates(head: h))
 

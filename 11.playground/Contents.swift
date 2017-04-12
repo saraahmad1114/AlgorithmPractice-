@@ -51,6 +51,7 @@ func removeDuplicates(head: Node?) -> Node? {
     return head
 }
 
+
 let h = Node.init(value: 1)
 
 var current = h
@@ -65,4 +66,6 @@ for i in 0..<30 {
 print(h)
 print("****************************")
 print(removeDuplicates(head: h))
+
+
 

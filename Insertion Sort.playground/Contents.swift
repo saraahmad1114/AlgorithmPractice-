@@ -5,7 +5,7 @@ import UIKit
 var str = "Hello, playground"
 
 
-//insertion sort: ranks elements by iterating through a collection and positions elements based on their value. The set is divided into sorted and unsorted halves and repeats until all elements are sorted. 
+//insertion sort: ranks elements by iterating through a collection and positions elements based on their value. The set is divided into sorted and unsorted halves and repeats until all elements are sorted.
 
 func insertionSort<T>(_ array: [T], _ isOrderedBefore: (T, T) -> Bool) -> [T] {
     var a = array
@@ -22,5 +22,10 @@ func insertionSort<T>(_ array: [T], _ isOrderedBefore: (T, T) -> Bool) -> [T] {
 }
 
 let list = [ 10, -1, 3, 9, 2, 27, 8, 5, 1, 3, 0, 26 ]
+
+
+print(list)
+
 print(insertionSort(list, <))
+
 print(insertionSort(list, >))

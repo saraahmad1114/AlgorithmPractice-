@@ -36,8 +36,7 @@ func removeDuplicates(head: Node?) -> Node? {
     var current = head
     var stableNode = head
     var set: Set<Int> = []
-    
-    
+
     while current != nil {
         
         if set.insert(current!.value).inserted {

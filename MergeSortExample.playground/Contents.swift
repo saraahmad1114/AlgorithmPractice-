@@ -28,23 +28,20 @@ func merge<T: Comparable>(_ left: [T], _ right: [T]) -> [T] {
     
     while leftIndex < left.count && rightIndex < right.count {
         
-        let leftElement = left[leftIndex]
-        let rightElement = right[rightIndex]
-        
-        if leftElement < rightElement {
-            orderedArray.append(leftElement)
+        if left[leftIndex] < right[rightIndex] {
+            orderedArray.append(left[leftIndex])
             leftIndex += 1
         }
             
-        else if leftElement > rightElement {
-            orderedArray.append(rightElement)
+        else if left[leftIndex] > right[rightIndex] {
+            orderedArray.append(right[rightIndex])
             rightIndex += 1
         }
             
         else {
-            orderedArray.append(leftElement)
+            orderedArray.append(left[leftIndex])
             leftIndex += 1
-            orderedArray.append(rightElement)
+            orderedArray.append(right[rightIndex])
             rightIndex += 1
         }
     }

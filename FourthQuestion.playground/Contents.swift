@@ -5,22 +5,22 @@ import UIKit
 var str = "Hello, playground"
 
 //Given two strings,write a method to decide if one is a permutation of the other.
-func createFrequencyDictionary (word: String)-> ([String: Int]){
-    var dictionary = [String: Int]()
-    var value = 0
-    for singleLetter in word.characters{
-//        var value = 0
-        var stringSingleLetter = String(singleLetter)
-        if dictionary[stringSingleLetter] == nil {
-            value = dictionary[String(singleLetter)]!
-            value = value + 1
-        }
-        else{
-            value = 1
-        }
-    }
-    return dictionary
-}
+//func createFrequencyDictionary (word: String)-> ([String: Int]){
+//    var dictionary = [String: Int]()
+//    var value = 0
+//    for singleLetter in word.characters{
+////        var value = 0
+//        var stringSingleLetter = String(singleLetter)
+//        if dictionary[stringSingleLetter] == nil {
+//            value = dictionary[String(singleLetter)]!
+//            value = value + 1
+//        }
+//        else{
+//            value = 1
+//        }
+//    }
+//    return dictionary
+//}
 
 
 func createDicitonary (str1: String, str2: String)-> ([String: Int], [String: Int]){

@@ -27,16 +27,12 @@ func reverseString (inputString: String) -> String{
            var rightElement = characterArray[rightIndex]
             
            characterArray.remove(at: leftIndex)
-           //print(characterArray.remove(at: leftIndex))
             
            characterArray.insert(rightElement, at: leftIndex)
-           //print(characterArray.insert(rightElement, at: leftIndex))
             
            characterArray.remove(at: rightIndex)
-           //print(characterArray.remove(at: rightIndex))
             
            characterArray.insert(leftElement, at: rightIndex)
-           //print(characterArray.insert(leftElement, at: rightIndex))
             
         leftIndex += 1
         rightIndex -= 1

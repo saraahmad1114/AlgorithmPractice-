@@ -10,17 +10,22 @@ var str = "Hello, playground"
 
 //By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
+//Remember the single principle for each function
 
-func calculateFibonacciNumbers(num: Int) -> Int {
+//calculate all the fibonacci Numbers
+func calculateFibonacciNumbers(num: Int) -> [Int] {
     
     var result: Int = 1
+    var resultsArray = [Int]()
     
     for i in 1...num {
         result = result + i
-        print(result)
+        resultsArray.append(result)
     }
     
-    return result
+    return resultsArray
 }
 
-calculateFibonacciNumbers(num: 1000)
+
+
+

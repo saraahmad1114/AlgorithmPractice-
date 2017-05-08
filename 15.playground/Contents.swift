@@ -26,6 +26,23 @@ func calculateFibonacciNumbers(num: Int) -> [Int] {
     return resultsArray
 }
 
+func findEvenNumbers (array: [Int]) -> [Int]{
 
+    var returnArray = [Int]()
+    
+    var limit = 4000000
+    
+    for num in array{
+        if num != limit && num % 2 == 0 {
+            returnArray.append(num)
+        }
+    }
+
+    return returnArray
+}
+
+var newArray = calculateFibonacciNumbers(num: 100)
+
+findEvenNumbers(array:newArray)
 
 

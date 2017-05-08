@@ -28,4 +28,19 @@ func findLargestPrimeFactorOf(number: Int) -> Int {
 
 findLargestPrimeFactorOf(number: 600851475143)
 
+//Without Recursion 
+
+var currPrime = 2
+var numberToFactor = 600851475143
+
+while numberToFactor > 1 {
+    if numberToFactor % currPrime == 0 {
+        numberToFactor = numberToFactor / currPrime
+    } else {
+        currPrime += 1
+    }
+}
+
+print(currentPrime)
+
 

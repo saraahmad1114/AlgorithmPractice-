@@ -60,5 +60,12 @@ func removedACharacter(str1: String, str2: String) -> Bool{
 }
 
 
+func replacedACharacter(str1: String, str2: String) -> Bool{
+
+
+}
+
+
+
 
 

@@ -17,15 +17,20 @@ func oneEditAway (str1: String, str2: String) -> Bool{
 
     //inserted a character
     if str1.characters.count == str2.characters.count + 1 || str2.characters.count == str1.characters.count + 1 {
+        print("character has been inserted")
         return insertedACharacter(str1: str1, str2: str2)
+        
     }
     //removed a character
     else if str1.characters.count == str2.characters.count - 1 || str2.characters.count == str1.characters.count - 1{
+        print("character has been removed")
         return removedACharacter(str1: str1, str2: str2)
     }
     //replaced a character
     else if str1.characters.count == str2.characters.count {
+        print("character has been replaced")
         return replacedACharacter(str1: str1, str2: str2)
+        
     }
     //else just return false
     else{
@@ -55,15 +60,50 @@ func insertedACharacter(str1: String, str2: String) -> Bool{
 
 func removedACharacter(str1: String, str2: String) -> Bool{
 
+    var removeCounter = 0
     
+    var str1Array: [String] = [String(str1.characters)]
+    var str2Array: [String] = [String(str2.characters)]
+    
+    for i in 0...str1Array.count-1{
+        if str1Array[i] == str2Array[i]{
+            removeCounter += 1
+        }
+    }
+    if removeCounter == str1Array.count || removeCounter == str2Array.count {
+        return true
+    }
+    else {
+        return false
+    }
 
 }
 
 
 func replacedACharacter(str1: String, str2: String) -> Bool{
 
+    var replacedCounter = 0
+    
+    var str1Array: [String] = [String(str1.characters)]
+    var str2Array: [String] = [String(str2.characters)]
+    
+    for i in 0...str1Array.count-1{
+        if str1Array[i] != str2Array[i]{
+            replacedCounter += 1
+        }
+    }
+    if replacedCounter >= 1 {
+        return true
+    }
+    else {
+        return false
+    }
 
 }
+
+print(oneEditAway(str1: "pale", str2: "ple"))
+
+
 
 
 

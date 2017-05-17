@@ -41,7 +41,7 @@ func insertedACharacter(str1: String, str2: String) -> Bool{
     var str2Array: [String] = [String(str2.characters)]
 
     for i in 0...str1Array.count-1{
-        if str1Array[i] == str2Array[i]{
+        if str1Array[i] != str2Array[i]{
             differenceCounter += 1
         }
     }

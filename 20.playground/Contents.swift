@@ -21,11 +21,11 @@ func oneEditAway (str1: String, str2: String) -> Bool{
     }
     //removed a character
     else if str1.characters.count == str2.characters.count - 1 || str2.characters.count == str1.characters.count - 1{
-        return removedACharacter(str1, str2)
+        return removedACharacter(str1: str1, str2: str2)
     }
     //replaced a character
     else if str1.characters.count == str2.characters.count {
-        return replacedACharacter(str1, str2)
+        return replacedACharacter(str1: str1, str2: str2)
     }
     //else just return false
     else{

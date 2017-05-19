@@ -16,13 +16,13 @@ var str = "Hello, playground"
 func oneEditAway (str1: String, str2: String) -> Bool{
 
     //inserted a character
-    if str1.characters.count == str2.characters.count + 1 || str2.characters.count == str1.characters.count + 1 {
+    if str1.characters.count == str2.characters.count + 1 {
         print("character has been inserted")
         return insertedACharacter(str1: str1, str2: str2)
         
     }
     //removed a character
-    else if str1.characters.count == str2.characters.count - 1 || str2.characters.count == str1.characters.count - 1{
+    else if str1.characters.count == str2.characters.count - 1 {
         print("character has been removed")
         return removedACharacter(str1: str1, str2: str2)
     }
@@ -32,7 +32,6 @@ func oneEditAway (str1: String, str2: String) -> Bool{
         return replacedACharacter(str1: str1, str2: str2)
         
     }
-    //else just return false
     else{
         return false
     }

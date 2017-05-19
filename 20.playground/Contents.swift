@@ -48,22 +48,24 @@ func oneEditAway (str1: String, str2: String) -> Bool{
 
 func differenceInCharacter(str1: String, str2: String) -> Bool{
 
-    var removeCounter = 0
+    var differenceCounter = 0
     
     var str1Array: [String] = [String(str1.characters)]
     var str2Array: [String] = [String(str2.characters)]
     
     for i in 0...str1Array.count-1{
         if str1Array[i] != str2Array[i]{
-            removeCounter += 1
+            differenceCounter += 1
         }
     }
-    if removeCounter == 1 {
+    if differenceCounter == 1 {
         return true
     }
-    else {
+    
+    else{
         return false
     }
+
 
 }
 

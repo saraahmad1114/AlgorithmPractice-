@@ -70,7 +70,7 @@ func differenceInCharacter(str1: String, str2: String) -> Bool{
 }
 
 
-print(oneEditAway(str1: "pale", str2: "bae"))
+print(oneEditAway(str1: "pale", str2: "sara"))
 
 
 

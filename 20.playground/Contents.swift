@@ -23,18 +23,18 @@ var str = "Hello, playground"
 
 func oneEditAway (str1: String, str2: String) -> Bool{
 
-    //inserted a character
-    if str2.characters.count == str1.characters.count + 1 {
+    //insertion of a character
+    if str1.characters.count + 1 == str2.characters.count {
         print("character has been inserted")
         return differenceInCharacter(str1: str1, str2: str2)
         
     }
-    //removed a character
-    else if str1.characters.count == str2.characters.count - 1 {
+    //removal of a character
+    else if str1.characters.count - 1  == str2.characters.count {
         print("character has been removed")
         return differenceInCharacter(str1: str1, str2: str2)
     }
-    //replaced a character
+    //replacement of a character
     else if str1.characters.count == str2.characters.count {
         print("character has been replaced")
         return differenceInCharacter(str1: str1, str2: str2)
@@ -58,7 +58,7 @@ func differenceInCharacter(str1: String, str2: String) -> Bool{
             removeCounter += 1
         }
     }
-    if removeCounter >= 1 {
+    if removeCounter == 1 {
         return true
     }
     else {
@@ -68,7 +68,7 @@ func differenceInCharacter(str1: String, str2: String) -> Bool{
 }
 
 
-print(oneEditAway(str1: "pale", str2: "ple"))
+print(oneEditAway(str1: "pale", str2: "bae"))
 
 
 

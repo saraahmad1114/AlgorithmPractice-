@@ -8,15 +8,23 @@ var str = "Hello, playground"
 
 //insert a character - meaning an extra character exists so its length = length + 1
 
+//pale -> pales
+
 //remove a character - meaning one character in length is missing so its length = length - 1 
 
+//pale -> ple
+
 //replace a string - meaning one character that so the length = length 
+
+//pale -> bale
+
+
 
 
 func oneEditAway (str1: String, str2: String) -> Bool{
 
     //inserted a character
-    if str1.characters.count == str2.characters.count + 1 {
+    if str2.characters.count == str1.characters.count + 1 {
         print("character has been inserted")
         return differenceInCharacter(str1: str1, str2: str2)
         

@@ -18,16 +18,16 @@ func whichStringIslonger(compressedString: String, originalString: String) -> St
     }
 }
 
-func createCompressedString (input: String) -> String{
-    
-    var compressedString = ""
-    
-    var compressedDictionary: [String: Int] = [:]
-    
-    for char in input.characters{
-        if 
-    }
-    
-    return compressedString
-}
+//func createCompressedString (input: String) -> String{
+//    
+//    var compressedString = ""
+//    
+//    var compressedDictionary: [String: Int] = [:]
+//    
+//    for char in input.characters{
+//        if
+//    }
+//    
+//    return compressedString
+//}
 

@@ -10,36 +10,36 @@ var str = "Hello, playground"
 
 
 
-func compressAString(input: String) -> String{
-
-    var compressedString = ""
-    
-    var counter = 0
-    
-    for i in 0...input.characters.count-1 {
-        
-        counter += 1
-        
-        var firstChar = String(input[input.index(input.startIndex, offsetBy: i)])
-        
-        var secondChar = String(input[input.index(input.startIndex, offsetBy: i+1)])
-        
-        if firstChar != secondChar {
-        
-            counter += 1
-            
-            compressedString += "\(firstChar)\(counter)"
-        }
-        
-    }
-    
-    //result.characters.count >= str.characters.count ? str : result
-
-    return compressedString
-
-}
-
-compressAString(input: "aabcccccaaa")
+//func compressAString(input: String) -> String{
+//
+//    var compressedString = ""
+//    
+//    var counter = 0
+//    
+//    for i in 0...input.characters.count-1 {
+//        
+//        counter += 1
+//        
+//        var firstChar = String(input[input.index(input.startIndex, offsetBy: i)])
+//        
+//        var secondChar = String(input[input.index(input.startIndex, offsetBy: i+1)])
+//        
+//        if firstChar != secondChar {
+//        
+//            counter += 1
+//            
+//            compressedString += "\(firstChar)\(counter)"
+//        }
+//        
+//    }
+//    
+//    //result.characters.count >= str.characters.count ? str : result
+//
+//    return compressedString
+//
+//}
+//
+//compressAString(input: "aabcccccaaa")
 
 
 

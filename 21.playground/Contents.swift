@@ -8,26 +8,7 @@ var str = "Hello, playground"
 
 //aabcccccaaa = a2b1c5a3 
 
-func whichStringIslonger(compressedString: String, originalString: String) -> String{
-    
-    if compressedString.characters.count < originalString.characters.count {
-        return compressedString
-    }
-    else {
-        return originalString
-    }
-}
 
-//func createCompressedString (input: String) -> String{
-//    
-//    var compressedString = ""
-//    
-//    var compressedDictionary: [String: Int] = [:]
-//    
-//    for char in input.characters{
-//        if
-//    }
-//    
-//    return compressedString
-//}
+
+
 

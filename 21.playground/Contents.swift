@@ -7,41 +7,31 @@ var str = "Hello, playground"
 //Question: Implement a method to perform basic string compression using the counts of repeated characters. For example, the string aabcccccaaa would become a2b1c5a3. If the compressed string would not become smaller thatn the original string, your method should return the original string. You can assume the sring has only uppercase and lowercase letters. 
 
 
-func compressAString(input: String) -> String{
-
-    var compressedString = ""
+func compressAString(given: String) -> String{
     
+    var compress = ""
+    var char = String(given[given.startIndex])
     var counter = 0
     
-    for i in 0...input.characters.count-1 {
+    for i in 0..<given.characters.count {
         
-        var firstChar = String(input[input.index(input.startIndex, offsetBy: i)])
+        let currentChar = String(given[given.index(given.startIndex, offsetBy: i)])
         
-        var secondChar = String(input[input.index(input.startIndex, offsetBy: i+1)])
-        
-        if firstChar == secondChar {
-        
+        if currentChar == char {
             counter += 1
-            
-        }
-        else {
-        
-            compressedString += "\(firstChar)\(counter)"
-            
-            secondChar = firstChar
-            
+        } else {
+            compress += "\(char)\(counter)"
+            char = currentChar
             counter = 1
-        
         }
-        
     }
-
-
-    return compressedString
+    return compress
 
 }
 
-var input = "aabcccccaaa"
+var given = "aabcccccaaa"
+
+compressAString(given: given)
 
 
 

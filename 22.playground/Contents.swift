@@ -27,10 +27,10 @@ func markRowAndColumn(input: [[Int]]) -> [[Int]] {
     
     // make all the columns and row zero
     for coord in coordinates {
+        
         let x = coord.first!
-        print(x)
+        
         let y = coord.last!
-        print(y)
         
         //make row "0"
         for i in 0..<M {
@@ -54,5 +54,6 @@ print(markRowAndColumn(input: matrix))
 
 //[[0, 2, 3, 4, 5], [0, 0, 0, 0, 0]]
 
-//Another solution 
+
+
 

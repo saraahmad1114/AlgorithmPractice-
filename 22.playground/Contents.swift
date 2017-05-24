@@ -8,9 +8,6 @@ var str = "Hello, playground"
 //Question: Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0. 
 
 
-
-
-
 func markRowAndColumn(input: [[Int]]) -> [[Int]] {
     
     var matrix: [[Int]] = input
@@ -31,7 +28,9 @@ func markRowAndColumn(input: [[Int]]) -> [[Int]] {
     // make all the columns and row zero
     for coord in coordinates {
         let x = coord.first!
+        print(x)
         let y = coord.last!
+        print(y)
         
         //make row "0"
         for i in 0..<M {
@@ -54,4 +53,6 @@ var matrix = [[1, 2, 3, 4, 5],
 print(markRowAndColumn(input: matrix))
 
 //[[0, 2, 3, 4, 5], [0, 0, 0, 0, 0]]
+
+//Another solution 
 

@@ -1,0 +1,9 @@
+//: Playground - noun: a place where people can play
+
+import UIKit
+
+var str = "Hello, playground"
+
+
+//Question: Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0. 
+

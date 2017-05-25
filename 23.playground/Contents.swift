@@ -29,3 +29,16 @@ func isSubstring (s1: String, s2: String) -> Bool{
 isSubstring(s1: "waterbottle", s2: "erbottlewat")
 
 
+//Another way to solve using recursion 
+
+func isRotation(s1: String, s2: String) -> Bool {
+    
+    var s1s1 = s1 + s1
+    
+    return s1s1.contains(s2)
+}
+
+isRotation(s1: "waterbottle", s2: "erbottlewat")
+
+
+

@@ -28,3 +28,47 @@ class Node: CustomStringConvertible{
     }
 
 }
+
+func removeDuplicates (head: Node?) -> Node? {
+
+    var current = head
+    
+    var stableNode = head
+    
+    var uniqueList : Set<Int> = []
+    
+    while current != nil {
+    
+        if uniqueList.insert(current!.value).inserted{
+            
+            stableNode = current!
+        }
+        else{
+            stableNode!.next = current!.next
+        }
+        
+        current = current!.next
+    }
+    
+    return head
+}
+
+let h = Node.init(value: 1)
+
+var current = h
+
+for i in 0..<30 {
+    
+    let randomValue = Int(arc4random_uniform(10))
+    
+    current.next = Node.init(value: randomValue)
+    
+    current = current.next!
+}
+
+removeDuplicates(head: h)
+
+print(h)
+
+print(removeDuplicates(head: h))
+

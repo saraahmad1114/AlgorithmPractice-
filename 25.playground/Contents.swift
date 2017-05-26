@@ -56,6 +56,12 @@ public class linkedList {
         
         tail = newNode
     }
+    
+    //To remove all nodes in the linked list 
+    public func removeAll() {
+        head = nil
+        tail = nil
+    }
 }
 
 //creating a linkedList

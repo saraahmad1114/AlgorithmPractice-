@@ -8,3 +8,23 @@ var str = "Hello, playground"
 
 //The idea is to have a set dataset in order to prevent any duplicates from being added 
 
+class Node: CustomStringConvertible{
+
+    var value: Int
+    var next: Node?
+    
+    var description: String{
+    
+        if next != nil {
+            return "(\(value) \(next))"
+        }
+        else {
+            return "(\(value) \(next))"
+        }
+    
+    }
+    init(value: Int) {
+        self.value = value
+    }
+
+}

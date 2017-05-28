@@ -62,7 +62,40 @@ public class linkedList {
         head = nil
         tail = nil
     }
+    
+    //
+    public func remove(node: Node) -> String {
+        let prev = node.previous
+        let next = node.next
+        
+        if let prev = prev {
+            prev.next = next // 1
+        } else {
+            head = next // 2
+        }
+        next?.previous = prev // 3
+        
+        if next == nil {
+            tail = prev // 4
+        }
+        
+        // 5
+        node.previous = nil 
+        node.next = nil
+        
+        // 6
+        return node.value
+    }
 }
+
+
+
+//1. updated the next pointer if you are not removing first node in the list 
+//2. Update the head pointer if you are removing the first node in the list 
+//3. update the previous pointer to the previous pointer of the deleted node 
+//4. update the tail if you are removing the last node in the list 
+//5. Assign nil to the removed nodes previous and next pointers 
+//6. return the value for the removed node. 
 
 //creating a linkedList
 let dogBreeds = linkedList()

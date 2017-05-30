@@ -33,7 +33,7 @@ class Node: CustomStringConvertible{
     }
 
 }
-
+v
 //2. Generation of a linked list
 
 func generateList () -> Node {

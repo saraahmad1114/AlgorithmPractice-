@@ -56,7 +56,30 @@ func generateList () -> Node {
 
 }
 
+//3. Delete Middle Node 
 
+func deleteMiddleNode (h: Node) -> Bool{
+
+    var current = h
+    
+    if current == nil || current.next == nil {
+    
+        return false
+    }
+    
+    var nextCurrent = current.next
+    
+    current.value = (nextCurrent?.value)!
+    
+    current.next = nextCurrent?.next
+    
+    return true
+    
+}
+
+let h = generateList()
+
+deleteMiddleNode(h: h)
 
 
 

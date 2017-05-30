@@ -7,7 +7,7 @@ var str = "Hello, playground"
 //Question: Implement an algorithm to find the kth to last element of a singly linked list. 
 
 
-//definition of the Linked List 
+//definition of the Linked List
 class Node: CustomStringConvertible{
     
     var value: Int
@@ -28,3 +28,19 @@ class Node: CustomStringConvertible{
     }
     
 }
+
+let h = Node.init(value: 1)
+
+var current = h
+
+for i in 0..<30 {
+    
+    let randomValue = Int(arc4random_uniform(10))
+    
+    current.next = Node.init(value: randomValue)
+    
+    current = current.next!
+}
+
+print(h)
+

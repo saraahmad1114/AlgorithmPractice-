@@ -90,7 +90,7 @@ func printKthtoLast (head: Node?, k: Int) -> Int{
     
     if index == k {
     
-        print("\(k) th to last node is \(head?.value)")
+        print("\(k)th to last node is \(current?.value)")
     
     }
 
@@ -98,6 +98,7 @@ func printKthtoLast (head: Node?, k: Int) -> Int{
 }
 
 printKthtoLast(head: firstList, k: number)
+
 
 
 

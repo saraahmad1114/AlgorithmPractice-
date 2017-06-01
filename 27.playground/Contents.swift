@@ -53,8 +53,8 @@ func generateLinkedList () -> Node {
     }
 
     return h
-
 }
+
 
 
 

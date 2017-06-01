@@ -34,7 +34,7 @@ class Node: CustomStringConvertible{
     
 }
 
-//2. Generate linked list 
+//2. Generation of the linked list
 
 func generateLinkedList () -> Node {
 
@@ -54,6 +54,10 @@ func generateLinkedList () -> Node {
 
     return h
 }
+
+//3. Rearrange the nodes 
+
+
 
 
 

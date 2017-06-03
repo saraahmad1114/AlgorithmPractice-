@@ -70,7 +70,7 @@ func partitionFor(value: Int, forList: Node?) -> Node? {
     var lessHead = Node.init(value: -100)
     var lessCurrent = lessHead
     
-    let moreHead = Node.init(value: -100)
+    let moreHead = Node.init(value: 100)
     var moreCurrent = moreHead
     
     while current != nil {

@@ -59,13 +59,58 @@ func generateLinkedList () -> Node {
 
 //3. Rearrange the nodes 
 
-func rearrangeNodes (input: Int, givenNode: Node?) -> Node? {
+func partitionFor(value: Int, forList: Node?) -> Node? {
     
+    if forList == nil {
+        return nil
+    }
     
-
-
-
+    var current = forList
+    
+    var lessHead = Node.init(value: -100)
+    var lessCurrent = lessHead
+    
+    let moreHead = Node.init(value: -100)
+    var moreCurrent = moreHead
+    
+    while current != nil {
+        
+        if current!.value < value {
+            lessCurrent.next = Node.init(value: current!.value)
+            lessCurrent = lessCurrent.next!
+        } else {
+            moreCurrent.next = Node.init(value: current!.value)
+            moreCurrent = moreCurrent.next!
+        }
+        
+        current = current!.next
+    }
+    
+    if lessHead.next == nil {
+        return moreHead.next
+    }
+    
+    if moreHead.next == nil {
+        return lessHead.next
+    }
+    
+    // merger two sub-lists
+    lessHead = lessHead.next!
+    lessCurrent.next = moreHead.next!
+    
+    return lessHead
 }
+
+let h = generateLinkedList()
+
+print(h)
+
+partitionFor(value: 50, forList: h)
+
+print(partitionFor(value: 50, forList: h))
+
+
+
 
 
 

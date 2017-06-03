@@ -55,9 +55,17 @@ func generateLinkedList () -> Node {
     return h
 }
 
+
+
 //3. Rearrange the nodes 
 
+func rearrangeNodes (input: Int, givenNode: Node?) -> Node? {
+    
+    
 
+
+
+}
 
 
 

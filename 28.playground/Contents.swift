@@ -28,3 +28,22 @@ class Node: CustomStringConvertible {
 
 }
 
+func generateLinkedList () -> Node {
+    
+    let h = Node.init(value: 1)
+    
+    var current = h
+    
+    for _ in 0..<30 {
+        
+        let randomNum = Int(arc4random_uniform(10))
+        
+        current.next = Node.init(value: randomNum)
+        
+        current = current.next!
+        
+    }
+    
+    return h
+}
+

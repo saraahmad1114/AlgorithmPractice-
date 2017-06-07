@@ -8,6 +8,12 @@ var str = "Hello, playground"
 
 //Question: Reverse a single linked linked list. 
 
+//defining the linked list 
+
+//A linked list has two things a value and then a pointer or address which points to the next node. 
+
+//Linked list have an advantage over an array because they are faster to use to look up things as compared to an array. 
+
 class Node {
 
     var value: Int
@@ -19,10 +25,25 @@ class Node {
     }
 }
 
+//creating all the links in the list
+
 let thirdNode = Node(value: 3, next: nil)
 
 let secondNode = Node(value: 2, next: thirdNode)
 
 let firstNode = Node(value: 1, next: secondNode)
+
+//printing all the contents of the linked list
+
+func printLinkedList (head: Node?){
+
+    var current = head
+    
+    while current != nil {
+        print(current?.value ?? -1)
+        current = current?.next
+    }
+    
+}
 
 

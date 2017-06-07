@@ -6,6 +6,8 @@ var str = "Hello, playground"
 
 //Chapter 3 
 
-//Question: Implement a MyQueue clas which implements a queue using two stacks. 
+//Question: Reverse a single linked linked list. 
+
+
 
 

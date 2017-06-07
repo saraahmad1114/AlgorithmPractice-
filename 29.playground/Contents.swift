@@ -6,6 +6,6 @@ var str = "Hello, playground"
 
 //Chapter 3 
 
-//Question: Describe how you could use a single array to implement three stacks. 
+//Question: Implement a MyQueue clas which implements a queue using two stacks. 
 
 

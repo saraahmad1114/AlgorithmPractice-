@@ -8,6 +8,16 @@ var str = "Hello, playground"
 
 //Question: Reverse a single linked linked list. 
 
+class Node {
 
+    var value: Int
+    var next: Node?
+    
+    init(value: Int, next: Node?) {
+        self.value = value
+        self.next = next
+    }
+
+}
 
 

@@ -12,7 +12,7 @@ var str = "Hello, playground"
 
 //A linked list has two things a value and then a pointer or address which points to the next node. 
 
-//Linked list have an advantage over an array because they are faster to use to look up things as compared to an array. 
+//Linked list have an advantage over an array because they are faster to use to look up things as compared to an array.
 
 class Node {
 
@@ -33,7 +33,7 @@ let secondNode = Node(value: 2, next: thirdNode)
 
 let firstNode = Node(value: 1, next: secondNode)
 
-//printing all the contents of the linked list
+//printing all the contents of the linked list: the list goes from 1 -> 2 -> 3 -> nil
 
 func printLinkedList (head: Node?){
 
@@ -45,5 +45,21 @@ func printLinkedList (head: Node?){
     }
     
 }
+
+func reverseLinkedList (head: Node?) -> Node? {
+
+    var current = head
+    var prev: Node?
+    var next: Node?
+    
+    while current != nil {
+        
+        current = current?.next
+    }
+
+    return prev
+}
+
+
 
 

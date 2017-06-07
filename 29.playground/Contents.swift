@@ -17,7 +17,12 @@ class Node {
         self.value = value
         self.next = next
     }
-
 }
+
+let thirdNode = Node(value: 3, next: nil)
+
+let secondNode = Node(value: 2, next: thirdNode)
+
+let firstNode = Node(value: 1, next: secondNode)
 
 

@@ -46,6 +46,8 @@ func printLinkedList (head: Node?){
     
 }
 
+//more changes 
+
 func reverseLinkedList (head: Node?) -> Node? {
 
     var current = head

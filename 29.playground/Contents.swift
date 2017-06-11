@@ -35,16 +35,24 @@ let firstNode = Node(value: 1, next: secondNode)
 
 //printing all the contents of the linked list: the list goes from 1 -> 2 -> 3 -> nil
 
-func printLinkedList (head: Node?){
+func printLinkedList (head: Node?) -> String{
 
     var current = head
     
+    var listVal = ""
+    
     while current != nil {
-        print(current?.value ?? -1)
+        
+        listVal += "\(current?.value ?? -1)"
+        
         current = current?.next
     }
     
+    return listVal
 }
+
+var newVal = printLinkedList(head: firstNode)
+
 
 //reversing the linked list
 

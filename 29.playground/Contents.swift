@@ -78,6 +78,8 @@ func reverseLinkedList (head: Node?) -> Node? {
 }
 
 
+
+
 //next function to add the contents in the linked list 
 
 

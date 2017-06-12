@@ -61,8 +61,7 @@ func reverseLinkedList (head: Node?) -> Node? {
     var current = head
     var prev: Node?
     var next: Node?
-    var num = 0
-    
+
     while current != nil {
         
         next = current?.next

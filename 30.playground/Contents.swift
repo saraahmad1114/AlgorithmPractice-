@@ -24,6 +24,28 @@ let secondNode = Node(value: 1, next: thirdNode)
 
 let firstNode = Node(value: 7, next: secondNode)
 
+func reverseLinkedList (h: Node?) -> Node{
+
+    var current = h
+    var prev: Node?
+    var next: Node?
+    
+    while current != nil {
+    
+        next = current?.next
+        
+        current?.next = prev
+        
+        prev = current
+        
+        current = next
+    
+    }
+    
+    return prev!
+
+}
+
 
 
 

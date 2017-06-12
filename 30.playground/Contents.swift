@@ -9,13 +9,21 @@ var str = "Hello, playground"
 class Node {
 
     var value: Int
-    var next: Node
+    var next: Node?
     
-    init(value: Int, next: Node) {
+    init(value: Int, next: Node?) {
         self.value = value
         self.next = next
     }
 
 }
+
+let thirdNode = Node(value: 6, next: nil)
+
+let secondNode = Node(value: 1, next: thirdNode)
+
+let firstNode = Node(value: 7, next: secondNode)
+
+
 
 

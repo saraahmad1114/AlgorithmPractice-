@@ -24,14 +24,14 @@ let secondNode = Node(value: 1, next: thirdNode)
 
 let firstNode = Node(value: 7, next: secondNode)
 
-func reverseLinkedList (h: Node?) -> Node{
-
-    var current = h
+func reverseLinkedList (head: Node?) -> Node? {
+    
+    var current = head
     var prev: Node?
     var next: Node?
     
     while current != nil {
-    
+        
         next = current?.next
         
         current?.next = prev
@@ -39,13 +39,38 @@ func reverseLinkedList (h: Node?) -> Node{
         prev = current
         
         current = next
-    
     }
     
-    return prev!
-
+    return prev
 }
 
+
+reverseLinkedList(head: firstNode)
+
+func printLinkedList (head: Node?) -> String{
+    
+    var current = head
+    
+    var listVal = ""
+    
+    while current != nil {
+        
+        listVal += "\(current?.value ?? -1)"
+        
+        current = current?.next
+    }
+    
+    return listVal
+}
+
+printLinkedList(head: thirdNode)
+
+//func provideSum (string: String) -> Int {
+//
+//
+//
+//
+//}
 
 
 

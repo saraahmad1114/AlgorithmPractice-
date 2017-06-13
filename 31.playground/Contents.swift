@@ -25,4 +25,61 @@ let secondNode = Node(value: 1, next: thirdNode)
 
 let firstNode = Node(value: 7, next: secondNode)
 
+func reverseLinkedList (h: Node?) -> Node? {
+
+    var current = h
+    
+    var prev: Node?
+    
+    var next: Node?
+    
+    while current != nil {
+        
+        next = current?.next
+        
+        current?.next = prev
+        
+        prev = current
+        
+        current = next
+    
+    }
+
+    return prev
+}
+
+func getLinkedListVal (h: Node?) -> String {
+    
+    var current = h
+    
+    var val = ""
+    
+    while current != nil {
+        
+        val += "\(current?.value ?? -1)"
+    
+        current = current?.next
+    
+    }
+
+    return val
+    
+}
+
+func isPalindrome (h:Node?) -> Bool {
+    
+    var current = h
+    
+    var unreversedVal = getLinkedListVal(h: current)
+    
+    var reversedCurrent = reverseLinkedList(h: current)
+    
+    var reversedVal = getLinkedListVal(h: reversedCurrent)
+    
+    return unreversedVal == reversedVal
+    
+}
+
+isPalindrome(h: firstNode)
+
 

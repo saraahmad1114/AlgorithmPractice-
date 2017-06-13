@@ -6,6 +6,10 @@ var str = "Hello, playground"
 
 //Question: You have two number represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1's digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list. 
 
+//original first linked list equals : 7 -> 1 -> 6 
+
+//original second linked list equals : 5 -> 9 -> 2
+
 class Node {
 
     var value: Int
@@ -18,11 +22,22 @@ class Node {
 
 }
 
+//first linked list
+
 let thirdNode = Node(value: 6, next: nil)
 
 let secondNode = Node(value: 1, next: thirdNode)
 
 let firstNode = Node(value: 7, next: secondNode)
+
+//second linked list
+
+let sixthNode = Node(value: 2, next: nil)
+
+let fifthNode = Node(value: 9, next: sixthNode)
+
+let fourNode = Node(value: 5, next: fifthNode)
+
 
 func reverseLinkedList (head: Node?) -> Node? {
     
@@ -45,9 +60,7 @@ func reverseLinkedList (head: Node?) -> Node? {
 }
 
 
-reverseLinkedList(head: firstNode)
-
-func printLinkedList (head: Node?) -> String{
+func getLinkedListVal (head: Node?) -> String{
     
     var current = head
     
@@ -63,14 +76,24 @@ func printLinkedList (head: Node?) -> String{
     return listVal
 }
 
-printLinkedList(head: thirdNode)
+func provideSum (firsth: Node?, secondh: Node?) -> Int {
 
-//func provideSum (string: String) -> Int {
-//
-//
-//
-//
-//}
+    var sum = 0
+    
+    let newFirsth = reverseLinkedList(head: firsth)
+    
+    let newSecondh = reverseLinkedList(head: secondh)
+    
+    var firstVal = Int(getLinkedListVal(head: newFirsth))
+    
+    var secondVal = Int(getLinkedListVal(head: newSecondh))
+    
+    sum = firstVal! + secondVal!
+
+    return sum
+}
+
+provideSum(firsth: firstNode, secondh: fourNode)
 
 
 

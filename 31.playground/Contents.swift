@@ -19,3 +19,10 @@ class Node {
 
 }
 
+let thirdNode = Node(value: 6, next: nil)
+
+let secondNode = Node(value: 1, next: thirdNode)
+
+let firstNode = Node(value: 7, next: secondNode)
+
+

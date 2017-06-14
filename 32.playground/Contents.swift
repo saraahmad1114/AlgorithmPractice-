@@ -8,17 +8,15 @@ var str = "Hello, playground"
 
 
 func searchingLinearly(value: Int, array: [Int]) -> Bool{
-
-    var foundValue = false
     
     for num in array {
     
         if num == value {
-            foundValue = true
+            return true
         }
     }
 
-    return foundValue
+    return false
 }
 
 searchingLinearly(value: 111, array: [1, 4, 5, 87, 9, 90, 101, 56, 111])

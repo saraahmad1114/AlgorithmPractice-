@@ -78,13 +78,21 @@ func findAnotherValueUsingBinarySearch (value: Int, array: [Int]) -> Bool {
             leftIndex = middleIndex + 1
         }
      
-        
-        
     }
     return false
 }
 
+findAnotherValueUsingBinarySearch(value: 18, array: numbersArray)
+
+//returns false
+
+findAnotherValueUsingBinarySearch(value: 17, array: numbersArray)
+
+//returns true
+
 findAnotherValueUsingBinarySearch(value: 16, array: numbersArray)
+
+//returns true
 
 
 

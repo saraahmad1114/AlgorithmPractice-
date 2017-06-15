@@ -16,18 +16,37 @@ func linearSearchForValue(value: Int, array: [Int]) -> Bool{
     return false
 }
 
-linearSearchForValue(value: 2, array: [1, 4, 5, 87, 9, 90, 101, 56, 111])
+linearSearchForValue(value: 2, array: [1, 4, 5, 9, 56, 87, 90, 101, 111])
 
 //returns false 
 
-linearSearchForValue(value: 111, array: [1, 4, 5, 87, 9, 90, 101, 56, 111])
+linearSearchForValue(value: 111, array: [1, 4, 5, 9, 56, 87, 90, 101, 111])
 
 //returns true 
 
-func binarySearchForValue (value: Int, array: [Int]) -> Bool {
+//For binary Search, the array of numbers must be sorted first, then you will keep break the array in a halves and searching to find that value, you are looking for.
 
+//Remember the array you are working with must be sorted already!
 
+let numbersArray = [1, 2, 4, 6, 8, 9, 11, 13, 16, 17, 20]
+
+func findValueUsingBinarySearch (value: Int, array: [Int]) -> Bool {
+    
+    var leftIndex = 0
+    var rightIndex = array.count - 1
+    
+    while leftIndex <= rightIndex {
+        var middleIndex = (leftIndex + rightIndex)/2
+        var middleValue = array[middleIndex]
+        if middleValue == value {
+            return true
+        }
+    }
     return false
 }
+
+findValueUsingBinarySearch(value: 9, array: numbersArray)
+
+//returns true
 
 

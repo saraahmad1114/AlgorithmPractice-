@@ -51,6 +51,8 @@ findValueUsingBinarySearch(value: 9, array: numbersArray)
 
 //Now to find 4
 
+//A binary search efficiently allows us to find a certain value in an array, where the numbers are already sorted. First we begin my breaking the array in half and looking for the number in the center and from there we will proceed to find the number either on the left if it is less than the middle value or the on the right if it is greater than the middle value
+
 func findAnotherValueUsingBinarySearch (value: Int, array: [Int]) -> Bool {
     
     var leftIndex = 0
@@ -58,19 +60,31 @@ func findAnotherValueUsingBinarySearch (value: Int, array: [Int]) -> Bool {
     
     while leftIndex <= rightIndex {
         var middleIndex = (leftIndex + rightIndex)/2
-        var middleValue = array[middleValue]
+        var middleValue = array[middleIndex]
         
-        //this will only work if you are looking for the absolute middle value 
+        
+        //if the given value is equal and in the middle value of the array
         if middleValue == value {
             return true
         }
         
+        //if the given value is less than the middle value of the array
+        if value < middleValue {
+            rightIndex = middleIndex - 1
+        }
+        
+        //if the given value is greater than the middle value of the array
+        if value > middleValue {
+            leftIndex = middleIndex + 1
+        }
+     
         
         
     }
-
-
     return false
-
 }
+
+findAnotherValueUsingBinarySearch(value: 16, array: numbersArray)
+
+
 

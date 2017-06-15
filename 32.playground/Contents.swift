@@ -49,4 +49,28 @@ findValueUsingBinarySearch(value: 9, array: numbersArray)
 
 //returns true
 
+//Now to find 4
+
+func findAnotherValueUsingBinarySearch (value: Int, array: [Int]) -> Bool {
+    
+    var leftIndex = 0
+    var rightIndex = array.count - 1
+    
+    while leftIndex <= rightIndex {
+        var middleIndex = (leftIndex + rightIndex)/2
+        var middleValue = array[middleValue]
+        
+        //this will only work if you are looking for the absolute middle value 
+        if middleValue == value {
+            return true
+        }
+        
+        
+        
+    }
+
+
+    return false
+
+}
 

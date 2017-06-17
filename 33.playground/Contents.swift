@@ -45,14 +45,8 @@ extension Stack: CustomStringConvertible {
 }
 
 
-
 var rawBookStack = Stack()
-
-//rawBookStack.push(_element: "FirstBook")
-//
-//rawBookStack.push(_element: "secondBook")
-//
-//rawBookStack.push(_element: "ThirdBook")
+//create the stack 
 
 rawBookStack.pop()
 //removed the last element inserted in

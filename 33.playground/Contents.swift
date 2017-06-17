@@ -41,8 +41,7 @@ extension Stack: CustomStringConvertible {
         
         return topDivider + stackElements + bottomDivider
     }
-    
-    
+
 }
 
 var rawBookStack = Stack()
@@ -73,7 +72,7 @@ print(rawBookStack)
 //3D Games by Tutorials
 //------------
 
-//STACKS WITH GENERICS 
+
 
 
 

@@ -40,7 +40,7 @@ rawBookStack.pop()
 //removed the last element inserted in
 
 rawBookStack.peek()
-//
+//allows you to see what is on the top 
 
 
 

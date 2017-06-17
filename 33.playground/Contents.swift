@@ -28,20 +28,56 @@ struct Stack {
 
 }
 
+extension Stack: CustomStringConvertible {
+    
+    var description: String {
+        
+        let topDivider = "---Stack---\n"
+        
+        let bottomDivider = "\n------------\n"
+        
+        let stackElements = array.reversed().joined(separator: "\n")
+        
+        return topDivider + stackElements + bottomDivider
+    }
+    
+    
+}
+
+
+
 var rawBookStack = Stack()
 
-rawBookStack.push(_element: "FirstBook")
-
-rawBookStack.push(_element: "secondBook")
-
-rawBookStack.push(_element: "ThirdBook")
+//rawBookStack.push(_element: "FirstBook")
+//
+//rawBookStack.push(_element: "secondBook")
+//
+//rawBookStack.push(_element: "ThirdBook")
 
 rawBookStack.pop()
 //removed the last element inserted in
 
 rawBookStack.peek()
-//allows you to see what is on the top 
+//allows you to see what is on the top
 
+//print(rawBookStack)
+//Where the secondBook now is on the top 
+
+rawBookStack.push(_element: "3D Games by Tutorials")
+rawBookStack.push(_element: "tvOS Apprentice")
+rawBookStack.push(_element: "iOS Apprentice")
+rawBookStack.push(_element: "Swift Apprentice")
+
+print(rawBookStack)
+
+//prints out like the following: 
+
+//---Stack---
+//Swift Apprentice
+//iOS Apprentice
+//tvOS Apprentice
+//3D Games by Tutorials
+//------------
 
 
 

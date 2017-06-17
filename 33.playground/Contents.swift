@@ -37,6 +37,7 @@ extension Stack: CustomStringConvertible {
         let bottomDivider = "\n------------\n"
         
         let stackElements = array.reversed().joined(separator: "\n")
+        //in order to get everything at the end of the array to appear on the top
         
         return topDivider + stackElements + bottomDivider
     }
@@ -44,9 +45,8 @@ extension Stack: CustomStringConvertible {
     
 }
 
-
 var rawBookStack = Stack()
-//create the stack 
+//create the stack
 
 rawBookStack.pop()
 //removed the last element inserted in

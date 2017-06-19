@@ -4,7 +4,7 @@ import UIKit
 
 var str = "Hello, playground"
 
-//Question: Write a function that accepts a String as its only parameter, and returns true if the string has only unique letters, taking letter case into account. 
+//1. Write a function that accepts a String as its only parameter, and returns true if the string has only unique letters, taking letter case into account.
 
 func isStringUnique (input: String) -> Bool {
 
@@ -23,3 +23,19 @@ isStringUnique(input: "hello")
 isStringUnique(input: "No duplicates")
 
 //returns true 
+
+//2. Write a function that accepts a String as its only parameter, and returns true if the string reads the same when reversed, ignoring case. 
+
+func isInputPalindrome(input: String) -> Bool {
+    
+    return Array(input.lowercased().characters) == Array(input.lowercased().characters).reversed()
+
+}
+
+isInputPalindrome(input: "racecar")
+
+//returns true
+
+isInputPalindrome(input: "cake")
+
+//returns false 

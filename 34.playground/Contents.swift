@@ -41,31 +41,33 @@ isInputPalindrome(input: "cake")
 //returns false 
 
 //3. Write a function that accepts two string parameters, and returns true if they contain the same characters in any order taking into account letter case. 
+func makeFrequencyDictionary (input:String) -> [String: Int] {
 
-func letterFrequencyDictionary (input: String) -> [String: Int]{
+var dictionary = [String: Int]()
 
-    var dictionary = [String: Int]()
+for i in 0..<str.characters.count {
     
-    for singleLetter in input.characters{
-        var value = 0
-        
-        var stringSingleLetter = String(singleLetter)
-        
-        if dictionary[stringSingleLetter] == nil {
-            
-            value = dictionary[String(singleLetter)]!
-            
-            value = value + 1
-        }
-        else{
-            
-            value = 1
-        }
+    let currentChar = String(str[str.index(str.startIndex, offsetBy: i)])
+    
+    if dictionary[currentChar] == nil {
+        dictionary[currentChar] = 1
+    } else {
+        dictionary[currentChar] = dictionary[currentChar]! + 1
     }
+}
     return dictionary
+
 }
 
-func doTheyContainTheSameChars (s1: String, s2: String) -> Bool {
-    
-    return letterFrequencyDictionary(input: s1) == letterFrequencyDictionary(input: s2)
+func doStringsContainSameCharacters (s1: String, s2: String) -> Bool {
+
+    return makeFrequencyDictionary(input: s1) == makeFrequencyDictionary(input: s2)
 }
+
+doStringsContainSameCharacters(s1: "abca", s2: "abca")
+
+
+
+
+
+

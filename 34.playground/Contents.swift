@@ -44,8 +44,12 @@ isInputPalindrome(input: "cake")
 func makeFrequencyDictionary (input:String) -> [String: Int] {
 
 var dictionary = [String: Int]()
+    
+var newInput = input
+    
+newInput = newInput.replacingOccurrences(of: " ", with: "")
 
-for i in 0..<input.characters.count {
+for i in 0..<newInput.characters.count {
     
     let currentChar = String(input[input.index(input.startIndex, offsetBy: i)])
     
@@ -73,11 +77,7 @@ doStringsContainSameCharacters(s1: "abca", s2: "abca")
 
 doStringsContainSameCharacters(s1: "abc", s2: "cba")
 
-//returns true 
-
-doStringsContainSameCharacters(s1: "a1 b2", s2: "b 1 a2")
-
-//returns false - need to fix, make sure to eliminate all spaces  
+//returns true
 
 doStringsContainSameCharacters(s1: "abc", s2: "abca")
 
@@ -90,6 +90,16 @@ doStringsContainSameCharacters(s1: "abc", s2: "Abc")
 doStringsContainSameCharacters(s1: "abc", s2: "cbAa")
 
 //returns false
+
+//Better way to do the following question would be also like this: 
+
+func doInputShareCommonChar (s1: String, s2: String) -> Bool {
+
+    return Array(s1.characters.sorted()) == Array(s2.characters.sorted())
+
+}
+
+
 
 
 

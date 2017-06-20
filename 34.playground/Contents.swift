@@ -45,13 +45,16 @@ func makeFrequencyDictionary (input:String) -> [String: Int] {
 
 var dictionary = [String: Int]()
 
-for i in 0..<str.characters.count {
+for i in 0..<input.characters.count {
     
-    let currentChar = String(str[str.index(str.startIndex, offsetBy: i)])
+    let currentChar = String(input[input.index(input.startIndex, offsetBy: i)])
     
     if dictionary[currentChar] == nil {
+        
         dictionary[currentChar] = 1
+        
     } else {
+        
         dictionary[currentChar] = dictionary[currentChar]! + 1
     }
 }
@@ -65,6 +68,28 @@ func doStringsContainSameCharacters (s1: String, s2: String) -> Bool {
 }
 
 doStringsContainSameCharacters(s1: "abca", s2: "abca")
+
+//returns true 
+
+doStringsContainSameCharacters(s1: "abc", s2: "cba")
+
+//returns true 
+
+doStringsContainSameCharacters(s1: "a1 b2", s2: "b 1 a2")
+
+//returns false - need to fix, make sure to eliminate all spaces  
+
+doStringsContainSameCharacters(s1: "abc", s2: "abca")
+
+//returns false 
+
+doStringsContainSameCharacters(s1: "abc", s2: "Abc")
+
+//returns false 
+
+doStringsContainSameCharacters(s1: "abc", s2: "cbAa")
+
+//returns false
 
 
 

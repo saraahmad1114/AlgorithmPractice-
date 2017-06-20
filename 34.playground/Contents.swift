@@ -94,11 +94,17 @@ doStringsContainSameCharacters(s1: "abc", s2: "cbAa")
 //Better way to do the following question would be also like this: 
 
 func doInputShareCommonChar (s1: String, s2: String) -> Bool {
+    
+    if s1.contains(" ") || s2.contains(" "){
+        return Array(s1.replacingOccurrences(of: " ", with: "").characters.sorted()) == Array(s2.replacingOccurrences(of: " ", with: "").characters.sorted())
+    }
 
     return Array(s1.characters.sorted()) == Array(s2.characters.sorted())
 
 }
 
+doInputShareCommonChar(s1: "a1 b2", s2: "b 1a2")
+    
 
 
 

@@ -151,7 +151,7 @@ letterFrequencyCount(letter: "i", s1: "Hacking with Swift")
 
 //6. Write a function that accepts a string as its input, and returns the same string just with duplicate letters removed. 
 
-//Remember Sets do not retain order like arrays do! 
+//Remember Sets do not retain order like arrays do!
 
 func removeDuplicates(input: String) -> String {
     
@@ -162,6 +162,14 @@ func removeDuplicates(input: String) -> String {
 }
 
 removeDuplicates(input: "Sara")
+
+removeDuplicates(input: "hello")
+
+removeDuplicates(input: "Mississippi")
+
+//7. Write a function that returns a string with any consecutive spaces replaced with a single space. 
+
+
 
 
     

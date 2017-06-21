@@ -119,6 +119,39 @@ areStringsSubstrings(s1: "WORLD", s2: "Hello, World")
 
 //returns false 
 
+//Question: write a function that accepts a string, and returns how many times a specific character appears, taking case into account. 
+
+func letterFrequencyCount (letter: String, s1: String) -> Int{
+
+    var counter = 0
+    
+    for char in s1.characters{
+        if String(char) == letter {
+            counter += 1
+        }
+    }
+    return counter
+}
+
+letterFrequencyCount(letter: "a", s1: "Sara")
+
+//output = 2
+
+letterFrequencyCount(letter: "a", s1: "The rain in Spain")
+
+//output = 2
+
+letterFrequencyCount(letter: "i", s1: "Mississippi")
+
+//output = 4
+
+letterFrequencyCount(letter: "i", s1: "Hacking with Swift")
+
+//output = 3
+
+
+    
+
 
 
 

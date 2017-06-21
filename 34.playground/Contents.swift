@@ -191,6 +191,32 @@ func replaceMultipleSpaces (input: String) -> String {
 
 replaceMultipleSpaces(input: "  a   b   c")
 
+//8. Write a function that accepts two strings, and returns true if one string is rotation of the other, taking letter case into account. 
+
+func areStringsRotation (s1: String, s2: String) -> Bool {
+
+    var s2s2 = s2 + s2
+    
+    var s1s1 = s1 + s1
+    
+    if s2s2.contains(s1) || s1s1.contains(s2){
+        return true
+    }
+    return false
+}
+
+areStringsRotation(s1: "abcde", s2: "eabcd")
+
+//returns true
+
+areStringsRotation(s1: "abcde", s2: "cdeab")
+
+//returns true
+
+areStringsRotation(s1: "abcde", s2: "abced")
+
+//returns false 
+
 
 
 

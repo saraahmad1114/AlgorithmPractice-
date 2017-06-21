@@ -104,6 +104,25 @@ func doInputShareCommonChar (s1: String, s2: String) -> Bool {
 }
 
 doInputShareCommonChar(s1: "a1 b2", s2: "b 1a2")
+
+//Question: Write your own version of the contains() method on string that ignores letter case, and without using the existing method. 
+
+func areStringsSubstrings (s1: String, s2: String) -> Bool {
+    return s2.range(of: s1) != nil
+    
+}
+areStringsSubstrings(s1: "Hello", s2: "Hello, World")
+
+//returns true
+
+areStringsSubstrings(s1: "WORLD", s2: "Hello, World")
+
+//returns false 
+
+
+
+
+
     
 
 

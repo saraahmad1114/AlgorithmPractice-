@@ -169,6 +169,31 @@ removeDuplicates(input: "Mississippi")
 
 //7. Write a function that returns a string with any consecutive spaces replaced with a single space. 
 
+func replaceMultipleSpaces (input: String) -> String {
+
+    var seenSpace = false
+    var returnValue = ""
+    
+    for letter in input.characters {
+        if letter == " " {
+            if seenSpace { continue }
+            seenSpace = true
+        } else {
+            seenSpace = false
+        }
+        
+        returnValue.append(letter)
+    }
+    
+    return returnValue
+    
+}
+
+replaceMultipleSpaces(input: "  a   b   c")
+
+
+
+
 
 
 

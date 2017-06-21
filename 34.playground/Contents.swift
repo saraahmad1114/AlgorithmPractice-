@@ -105,7 +105,7 @@ func doInputShareCommonChar (s1: String, s2: String) -> Bool {
 
 doInputShareCommonChar(s1: "a1 b2", s2: "b 1a2")
 
-//Question: Write your own version of the contains() method on string that ignores letter case, and without using the existing method. 
+//4. Write your own version of the contains() method on string that ignores letter case, and without using the existing method.
 
 func areStringsSubstrings (s1: String, s2: String) -> Bool {
     return s2.range(of: s1) != nil
@@ -119,7 +119,7 @@ areStringsSubstrings(s1: "WORLD", s2: "Hello, World")
 
 //returns false 
 
-//Question: write a function that accepts a string, and returns how many times a specific character appears, taking case into account. 
+//5. write a function that accepts a string, and returns how many times a specific character appears, taking case into account.
 
 func letterFrequencyCount (letter: String, s1: String) -> Int{
 
@@ -148,6 +148,20 @@ letterFrequencyCount(letter: "i", s1: "Mississippi")
 letterFrequencyCount(letter: "i", s1: "Hacking with Swift")
 
 //output = 3
+
+//6. Write a function that accepts a string as its input, and returns the same string just with duplicate letters removed. 
+
+//Remember Sets do not retain order like arrays do! 
+
+func removeDuplicates(input: String) -> String {
+    
+    let set = Set(input.characters)
+    
+    return String(set)
+
+}
+
+removeDuplicates(input: "Sara")
 
 
     

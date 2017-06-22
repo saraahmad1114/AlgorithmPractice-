@@ -199,9 +199,9 @@ func areStringsRotation (s1: String, s2: String) -> Bool {
         return false
     }
     
-    var s2s2 = s2 + s2
+    let s2s2 = s2 + s2
     
-    var s1s1 = s1 + s1
+    let s1s1 = s1 + s1
     
     return s2s2.contains(s1) || s1s1.contains(s2)
     
@@ -219,8 +219,35 @@ areStringsRotation(s1: "abcde", s2: "abced")
 
 //returns false 
 
-//9. 
+//9. Write a function that returns true if it is given a string that is an English pangram, ignoring letter case.
 
+//A pangram is a string that contains all the letters of the alphabet.
+
+func isStringPangram(input: String) -> Bool {
+
+    var letters = [Character]()
+    
+    for i in 97...122 {
+        let char = Character(UnicodeScalar(i)!)
+        letters.append(char)
+    }
+    
+    var newInput = input.lowercased().replacingOccurrences(of: " ", with: "")
+    
+    print(newInput.characters.count)
+    print(letters.count)
+    
+    return Set(newInput.characters).count == letters.count
+}
+
+
+isStringPangram(input: "The quick brown fox jumps over the lazy dog")
+
+//returns true 
+
+isStringPangram(input: "The quick brown fox jumped over the lazy dog")
+
+//returns false 
 
 
 

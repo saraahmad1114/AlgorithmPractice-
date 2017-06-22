@@ -250,6 +250,27 @@ isStringPangram(input: "The quick brown fox jumped over the lazy dog")
 //returns false 
 
 
+//10. Given a String in English, return a tuple of containing the number of vowels and consonants. 
+
+func countVowelsAndConsonants(input: String) -> (Int, Int){
+
+    var vowelAndConsonants = (0,0)
+    
+    var vowels = ["a", "e", "i", "o", "u"]
+    
+    var newInput = input.lowercased().replacingOccurrences(of: " ", with: "")
+    
+    for char in vowels{
+        if newInput.contains(char){
+            vowelAndConsonants.0 += 1
+        }
+        vowelAndConsonants.1 += 1
+    }
+    
+    return vowelAndConsonants
+}
+
+countVowelsAndConsonants(input: "Swift Coding Challenges")
 
 
 

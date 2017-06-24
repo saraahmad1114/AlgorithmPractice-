@@ -267,12 +267,17 @@ func countVowelsAndConsonants(input: String) -> (Int, Int){
         if vowels.contains(newChar){
             vowelAndConsonants.0 += 1
         }
+        else {
         vowelAndConsonants.1 += 1
+            
+        }
     }
     return vowelAndConsonants
 }
 
-countVowelsAndConsonants(input: "Swift Coding Challenges")
+print(countVowelsAndConsonants(input: "Swift Coding Challenges"))
+
+countVowelsAndConsonants(input: "Mississippi")
 
 
 

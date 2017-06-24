@@ -322,6 +322,18 @@ differenceInStrings(s1: "Clamp", s2: "Maple")
 
 //returns false 
 
+//12. Write a function that accepts a string of words with a similar prefix, separated by spaces, and returns the longest substring that prefixes all words. 
+
+func findLongestPrefix (s1: String) -> String {
+
+    var longestPrefix = ""
+    
+    var stringArray = s1.components(separatedBy: " ")
+    
+
+    return longestPrefix
+}
+
 
 
 

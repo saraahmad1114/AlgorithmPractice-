@@ -279,7 +279,36 @@ print(countVowelsAndConsonants(input: "Swift Coding Challenges"))
 
 countVowelsAndConsonants(input: "Mississippi")
 
-//11. Write a function that accepts two strings, and returns true if they are identical in length but have no more than three different letters, taking case and string order in account. 
+//11. Write a function that accepts two strings, and returns true if they are identical in length but have no more than three different letters, taking case and string order in account.
+
+func differenceInStrings (s1: String, s2: String) -> Bool {
+
+    var counter = 0
+    for char in s1.characters{
+    
+        if !s2.characters.contains(char){
+            counter += 1
+        }
+    }
+    
+    return s1 == s2 || counter <= 3
+}
+
+differenceInStrings(s1: "Clamp", s2: "Cramp")
+
+//returns true
+
+differenceInStrings(s1: "Clamp", s2: "Crams")
+
+//returns true 
+
+differenceInStrings(s1: "Clamp", s2: "Grams")
+
+//returns true 
+
+differenceInStrings(s1: "Clamp", s2: "Grans")
+
+//returns false 
 
 
 

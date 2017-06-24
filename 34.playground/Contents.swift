@@ -269,7 +269,6 @@ func countVowelsAndConsonants(input: String) -> (Int, Int){
         }
         vowelAndConsonants.1 += 1
     }
-    
     return vowelAndConsonants
 }
 

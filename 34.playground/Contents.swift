@@ -260,8 +260,11 @@ func countVowelsAndConsonants(input: String) -> (Int, Int){
     
     var newInput = input.lowercased().replacingOccurrences(of: " ", with: "")
     
-    for char in vowels{
-        if newInput.contains(char){
+    for char in newInput.characters{
+        
+        var newChar = String(char)
+        
+        if vowels.contains(newChar){
             vowelAndConsonants.0 += 1
         }
         vowelAndConsonants.1 += 1

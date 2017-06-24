@@ -283,6 +283,10 @@ countVowelsAndConsonants(input: "Mississippi")
 
 func differenceInStrings (s1: String, s2: String) -> Bool {
 
+    if s1.characters.count != s2.characters.count {
+        return false
+    }
+    
     var counter = 0
     for char in s1.characters{
     
@@ -307,6 +311,14 @@ differenceInStrings(s1: "Clamp", s2: "Grams")
 //returns true 
 
 differenceInStrings(s1: "Clamp", s2: "Grans")
+
+//returns false 
+
+differenceInStrings(s1: "Clamp", s2: "Clam")
+
+//returns false 
+
+differenceInStrings(s1: "Clamp", s2: "Maple")
 
 //returns false 
 

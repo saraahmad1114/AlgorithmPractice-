@@ -279,6 +279,10 @@ print(countVowelsAndConsonants(input: "Swift Coding Challenges"))
 
 countVowelsAndConsonants(input: "Mississippi")
 
+//11. Write a function that accepts two strings, and returns true if they are identical in length but have no more than three different letters, taking case and string order in account. 
+
+
+
 
 
 

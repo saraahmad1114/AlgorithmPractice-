@@ -420,6 +420,16 @@ func stringCompressionSecondWay (input: String) -> String{
 
 stringCompressionSecondWay(input: "aabbcc")
 
+//returns "a2b2c2"
+
+stringCompressionSecondWay(input: "aaabaaabaaa")
+
+//returns "a3b1a3b1a3"
+
+stringCompressionSecondWay(input: "aaAAaa")
+
+//returns "a2A2a2"
+
 
 
 

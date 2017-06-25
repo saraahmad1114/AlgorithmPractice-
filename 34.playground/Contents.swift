@@ -399,6 +399,27 @@ compressString(input: "aaAAaa")
 
 //returns "a2A2a2"
 
+//Another way to do string compression - this way tends to be much slower than the first way on the top 
+
+func stringCompressionSecondWay (input: String) -> String{
+
+    var compressedString = ""
+    var counter = 0
+    var array = Array(input.characters)
+    
+    for i in 0..<array.count{
+        counter += 1
+        if i + 1 == array.count || array[i] != array[i+1] {
+            compressedString += "\(array[i])\(counter)"
+            counter = 0
+        }
+    }
+    
+    return compressedString
+}
+
+stringCompressionSecondWay(input: "aabbcc")
+
 
 
 

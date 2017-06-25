@@ -453,6 +453,7 @@ func findAllPossiblePermutations (string: String, current: String = ""){
         
         // loop through every character
         for i in 0..<length{
+            
             let left = String(strArray[0 ..< i])
         // get the letters before me
             
@@ -468,6 +469,10 @@ func findAllPossiblePermutations (string: String, current: String = ""){
 }
 
 findAllPossiblePermutations(string: "wombat", current: "")
+
+findAllPossiblePermutations(string: "ab", current: "")
+
+findAllPossiblePermutations(string: "abc", current: "")
 
 
 

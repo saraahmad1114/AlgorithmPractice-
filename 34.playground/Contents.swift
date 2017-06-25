@@ -430,6 +430,9 @@ stringCompressionSecondWay(input: "aaAAaa")
 
 //returns "a2A2a2"
 
+//14. Write a function that prints all possible permutations of a given input string 
+
+//Tip: A string permutation is any given rearrangement of its letters, for example "boamtw" is a permutation of "wombat"
 
 
 

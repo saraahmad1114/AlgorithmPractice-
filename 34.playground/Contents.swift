@@ -41,6 +41,7 @@ isInputPalindrome(input: "cake")
 //returns false 
 
 //3. Write a function that accepts two string parameters, and returns true if they contain the same characters in any order taking into account letter case. 
+
 func makeFrequencyDictionary (input:String) -> [String: Int] {
 
 var dictionary = [String: Int]()
@@ -433,6 +434,40 @@ stringCompressionSecondWay(input: "aaAAaa")
 //14. Write a function that prints all possible permutations of a given input string 
 
 //Tip: A string permutation is any given rearrangement of its letters, for example "boamtw" is a permutation of "wombat"
+
+func findAllPossiblePermutations (string: String, current: String = ""){
+
+    let length = string.characters.count
+    
+    let strArray = Array(string.characters)
+    
+    if length == 0 {
+    // there's nothing left to re-arrange; print the result”
+        
+        print(current)
+        print("******")
+        
+    } else {
+        
+        print(current)
+        
+        // loop through every character
+        for i in 0..<length{
+            let left = String(strArray[0 ..< i])
+        // get the letters before me
+            
+            let right = String(strArray[i+1 ..< length])
+            // get the letters after me
+            
+            findAllPossiblePermutations(string: left + right, current: current + String(strArray[i]))
+            // put those two together and carry on
+            
+        }
+    }
+
+}
+
+findAllPossiblePermutations(string: "wombat", current: "")
 
 
 

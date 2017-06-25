@@ -388,9 +388,15 @@ func compressString(input: String) -> String {
 
 compressString(input: "aabbcc")
 
+//returns "a2b2c2"
+
 compressString(input: "aaabaaabaaa")
 
+//returns "a3b1a3b1a3"
+
 compressString(input: "aaAAaa")
+
+//returns "a2A2a2"
 
 
 

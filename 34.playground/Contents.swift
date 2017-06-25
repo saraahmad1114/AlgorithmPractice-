@@ -355,8 +355,8 @@ findLongestPrefix(input: "swift switch swill swim")
 
 func compressString(input: String) -> String {
     
-    if str.characters.count < 2 {
-        return str
+    if input.characters.count < 2 {
+        return input
     }
     
     var currentLetter : Character?
@@ -370,7 +370,7 @@ func compressString(input: String) -> String {
         }
         else{
             if let current = currentLetter {
-                compressedString.append("\(current)\(counter)")
+                compressedString += ("\(current)\(counter)")
             }
             
             currentLetter = letter
@@ -379,7 +379,7 @@ func compressString(input: String) -> String {
     }
     
     if let current = currentLetter {
-        compressedString.append("\(current)\(counter)")
+        compressedString += ("\(current)\(counter)")
     }
     
     
@@ -387,6 +387,10 @@ func compressString(input: String) -> String {
 }
 
 compressString(input: "aabbcc")
+
+compressString(input: "aaabaaabaaa")
+
+compressString(input: "aaAAaa")
 
 
 

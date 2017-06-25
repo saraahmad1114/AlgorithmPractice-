@@ -351,7 +351,9 @@ differenceInStrings(s1: "Clamp", s2: "Maple")
 
 findLongestPrefix(input: "swift switch swill swim")
 
-//13. Write a function that accepts a string as input, then returns how often each letter is repeated in a single run, taking case into account. This approach is used in a simple lossless compression technique called run-length encoding. 
+//13. Write a function that accepts a string as input, then returns how often each letter is repeated in a single run, taking case into account. 
+
+//This approach is used in a simple lossless compression technique called run-length encoding.
 
 func compressString(input: String) -> String {
     
@@ -381,7 +383,6 @@ func compressString(input: String) -> String {
     if let current = currentLetter {
         compressedString += ("\(current)\(counter)")
     }
-    
     
     return compressedString
 }

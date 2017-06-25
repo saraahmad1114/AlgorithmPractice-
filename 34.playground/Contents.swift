@@ -330,7 +330,13 @@ func findLongestPrefix (s1: String) -> String {
     
     var stringArray = s1.components(separatedBy: " ")
     
-    guard let first = parts.first else { return "" }
+    guard let first = stringArray.first else { return "" }
+    
+    var currentPrefix = ""
+    var bestPrefix = ""
+    
+    
+    
     
     
 

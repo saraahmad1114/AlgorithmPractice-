@@ -474,6 +474,24 @@ findAllPossiblePermutations(string: "ab", current: "")
 
 findAllPossiblePermutations(string: "abc", current: "")
 
+//15. Write a function that returns a string with each of its word but in original order, without using a loop
+
+func reverseAString(input: String) -> String {
+
+    var reversedString = ""
+
+    reversedString = String(input.characters.reversed())
+    
+    return reversedString
+}
+
+reverseAString(input: "Swift Coding Challenges")
+
+reverseAString(input: "The quick brown fox")
+
+
+
+
 
 
 

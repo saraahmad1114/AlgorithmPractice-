@@ -28,4 +28,14 @@ func fizzBuzz () {
 
 fizzBuzz()
 
+//17. Write a function that accepts positive minimum and maximum integers, and returns a random number between those two bounds, inclusive. 
+
+func generateRandomNum (min: Int, max: Int) -> Int {
+    
+    return Int(arc4random_uniform(UInt32(max - min + 1))) + min
+
+}
+
+generateRandomNum(min: 12, max: 18)
+
 

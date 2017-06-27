@@ -43,10 +43,18 @@ generateRandomNum(min: 12, max: 18)
 
 func power(firstInt: Int, secondInt: Int) -> Int {
     
-    var answer = 0
+    var returnValue = firstInt
     
-    return answer 
+    for _ in 1..<secondInt{
+        
+        returnValue *= firstInt
+    }
+    
+    return returnValue
 
 }
+power(firstInt: 4, secondInt: 3)
+
+power(firstInt: 2, secondInt: 8)
 
 

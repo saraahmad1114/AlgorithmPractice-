@@ -55,6 +55,27 @@ func power(firstInt: Int, secondInt: Int) -> Int {
 }
 power(firstInt: 4, secondInt: 3)
 
+//returns 64
+
 power(firstInt: 2, secondInt: 8)
 
+//returns 256
+
+//Another way to do this problem 
+
+func powerMethodTwo(firstInt: Int, secondInt: Int) -> Int {
+
+    if secondInt == 1 {
+        return firstInt
+    }
+    return firstInt * powerMethodTwo(firstInt: firstInt, secondInt: secondInt - 1)
+}
+
+powerMethodTwo(firstInt: 4, secondInt: 3)
+
+//returns 64
+
+powerMethodTwo(firstInt: 2, secondInt: 8)
+
+//returns 256
 

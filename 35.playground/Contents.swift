@@ -39,3 +39,14 @@ func generateRandomNum (min: Int, max: Int) -> Int {
 generateRandomNum(min: 12, max: 18)
 
 
+//18. Create a function that accepts positive two integers, and raises the first to the power of the second. 
+
+func power(firstInt: Int, secondInt: Int) -> Int {
+    
+    var answer = 0
+    
+    return answer 
+
+}
+
+

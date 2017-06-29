@@ -81,5 +81,16 @@ powerMethodTwo(firstInt: 2, secondInt: 8)
 
 //19. Swap two positive variable integers, a and b without using a temporary variable. 
 
+func swapPositiveIntegers (a: inout Int, b: inout Int) -> (Int, Int){
+    
+    var tempA = a
+    var tempB = b
+    
+    (tempA, tempB) = (tempB, tempA)
 
+    return (tempA, tempB)
+    
+}
+
+//swapPositiveIntegers(a: &8, b: &9)
 

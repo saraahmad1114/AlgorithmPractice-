@@ -177,7 +177,6 @@ return (nextHighest, nextLowest)
 
 }
 
-
 findNextHigherAndLowerBinaryNum(number: 12)
 
 //returns 17 and 10
@@ -185,6 +184,29 @@ findNextHigherAndLowerBinaryNum(number: 12)
 findNextHigherAndLowerBinaryNum(number: 28)
 
 //returns 35 and 26
+
+//21. Create a function that accepts an unsigned 8-bit integer and returns its binary reverse, padded so that it holds precisely eight binary digits 
+
+func getBinaryReverseFromInt (number: Int) -> Int {
+    
+    let binary = String(number, radix: 2)
+    
+    let paddingAmount = 8 - binary.characters.count
+    
+    let paddedBinary = String(repeating: "0", count: paddingAmount) + binary
+    
+    let reversedBinary = String(paddedBinary.characters.reversed())
+    
+    return Int(UInt(reversedBinary, radix: 2)!)
+
+}
+
+getBinaryReverseFromInt(number: 32)
+
+getBinaryReverseFromInt(number: 41)
+
+
+
 
 
 

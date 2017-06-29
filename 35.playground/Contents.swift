@@ -94,3 +94,54 @@ func swapPositiveIntegers (a: inout Int, b: inout Int) -> (Int, Int){
 
 //swapPositiveIntegers(a: &8, b: &9)
 
+//20. Write a function that accepts an integer as its parameter and returns true if the number is prime. 
+
+//A prime number is only divisible by 1 and itself hence it will be num % num == 0
+
+func isNumberPrime (num: Int) -> Bool {
+    
+    if num <= 2 {
+        return true }
+    
+    for i in 2 ..< num {
+        if num % i == 0 {
+            return false
+        }
+    }
+    
+    return true
+}
+
+isNumberPrime(num: 2)
+
+//returns true
+
+isNumberPrime(num: 13)
+
+//returns true
+
+isNumberPrime(num: 4)
+
+//returns false
+
+isNumberPrime(num: 9)
+
+//returns false
+
+isNumberPrime(num: 11)
+
+//returns true
+
+isNumberPrime(num: 13)
+
+//returns true
+
+isNumberPrime(num: 16777259)
+
+//returns true 
+
+
+
+
+
+

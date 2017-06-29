@@ -224,6 +224,36 @@ isStringAnInt(string: "9223372036854775808")
 
 //24. Given a string that contains both letters and numbers, write a function that pulls out all the numbers then returns their sum. 
 
+//Key Here: when you convert something into a character, or use the .characters property, its wise that you convert it back into a string and then do what you need to do.
+
+func findIntegersInString (input: String) -> Int {
+
+    var sum = 0
+    
+    for char in input.characters{
+    
+        var newChar = String(char)
+        
+        if Int(newChar) != nil {
+            sum += Int(newChar)!
+        }
+    }
+    
+    return sum
+
+}
+
+findIntegersInString(input: "a1b2c3")
+
+//returns 6
+
+findIntegersInString(input: "a10b20c30")
+
+//returns 6 
+
+
+
+
 
 
 

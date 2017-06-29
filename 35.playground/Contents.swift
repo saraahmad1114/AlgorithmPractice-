@@ -205,6 +205,27 @@ getBinaryReverseFromInt(number: 32)
 
 getBinaryReverseFromInt(number: 41)
 
+func isStringAnInt(string: String) -> Bool {
+    
+    return Int(string) != nil
+}
+
+isStringAnInt(string: "01010101")
+
+//returns true
+
+isStringAnInt(string: "123456789")
+
+//returns true
+
+isStringAnInt(string: "9223372036854775808")
+
+//returns true
+
+//24. Given a string that contains both letters and numbers, write a function that pulls out all the numbers then returns their sum. 
+
+
+
 
 
 

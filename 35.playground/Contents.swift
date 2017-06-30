@@ -251,6 +251,34 @@ findIntegersInString(input: "a10b20c30")
 
 //returns 6 
 
+//25. Write a function that returns the square root of a positive integer, rounded down to the nearest integer, without using sqrt().
+
+func findSquareRoot (number: Int) -> Int? {
+
+    var squareRoot: Int? = nil
+    
+    for i in 1...Int.max{
+        if i*i == number{
+            squareRoot = i
+            break
+        }
+    }
+    
+    return squareRoot!
+
+}
+
+findSquareRoot(number: 9)
+
+//returns 3 
+
+findSquareRoot(number: 42)
+
+
+
+
+
+
 
 
 

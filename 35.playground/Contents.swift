@@ -272,7 +272,21 @@ findSquareRoot(number: 9)
 
 //returns 3 
 
-findSquareRoot(number: 42)
+findSquareRoot(number: 36)
+
+//26. Create a function that subtracts one positive integer from another, without using -
+
+func subtractWithoutSign (subtract: Int, from: Int) -> Int {
+    return from + (-1 * subtract)
+
+}
+
+subtractWithoutSign(subtract: 5, from: 10)
+
+//return 5 
+
+
+
 
 
 

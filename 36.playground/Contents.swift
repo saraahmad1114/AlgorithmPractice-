@@ -40,8 +40,13 @@ func writeA(log message: String, to logFile: String) {
 func returnURL() -> URL {
     
     let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    
     return paths[0]
 }
+
+//30. Question: Write a function that accepts a path to a directory and returns an array of all the JPEGs that have been created in the last 48 hours. 
+
+
 
 
 

@@ -93,6 +93,19 @@ func acceptTwoPaths(source: String, destination: String) -> Bool {
     return true
 }
 
+//32. Question: Write a function that accepts a filename on disk, loads it into a string, then returns the frequency of a word in that string, taking letter case into account. How you define "word" is worth considering carefully. 
+
+func challenge32(filename: String, count: String) -> Int {
+    
+    guard let inputString = try? String(contentsOfFile: filename) else { return 0 }
+    var nonletters = CharacterSet.letters.inverted
+    nonletters.remove("'")
+    
+    let allWords = inputString.components(separatedBy: nonletters)
+    let wordsSet = NSCountedSet(array: allWords)
+    
+    return wordsSet.count(for: count)
+}
 
     
 

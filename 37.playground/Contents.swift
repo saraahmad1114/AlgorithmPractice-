@@ -39,7 +39,6 @@ extension Collection where Iterator.Element == Int {
 
 //returns 0
 
-//Another way to do this problem 
 
 
 

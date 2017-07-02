@@ -39,7 +39,17 @@ extension Collection where Iterator.Element == Int {
 
 //returns 0
 
+//Another way using .filter 
 
+extension Collection where Iterator.Element == Int {
+
+    func findCharCount(char: Character) -> Int {
+        return self.reduce(0) {
+            $0 + String($1).characters.filter { $0 == char }.count
+        }
+    }
+
+}
 
 
 

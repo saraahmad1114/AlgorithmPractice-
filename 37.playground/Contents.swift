@@ -39,7 +39,7 @@ extension Collection where Iterator.Element == Int {
 
 //returns 0
 
-//Another way using .filter 
+//Another way using .filter
 
 extension Collection where Iterator.Element == Int {
 
@@ -48,8 +48,23 @@ extension Collection where Iterator.Element == Int {
             $0 + String($1).characters.filter { $0 == char }.count
         }
     }
-
 }
+
+//38. Question: Write an extension for all collections that returns the N smallest elements as an array, sorted smallest first, where N is an integer parameter 
+
+extension Collection where Iterator.Element: Comparable {
+    func sortArrayTill(count: Int) -> [Iterator.Element] {
+        let sorted = self.sorted()
+        return Array(sorted.prefix(count))
+    }
+}
+
+[1, 2, 3, 4].sortArrayTill(count: 3)
+
+
+
+
+
 
 
 

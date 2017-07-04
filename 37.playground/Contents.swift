@@ -74,6 +74,8 @@ extension Collection where Iterator.Element: Comparable{
 
 //same result as above 
 
+//39. Question: Extend collections with a function that returns an array of strings sorted by their lengths, longest first. 
+
 
 
 

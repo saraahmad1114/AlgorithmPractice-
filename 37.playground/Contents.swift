@@ -77,13 +77,14 @@ extension Collection where Iterator.Element: Comparable{
 //39. Question: Extend collections with a function that returns an array of strings sorted by their lengths, longest first. 
 
 extension Collection where Iterator.Element == String{
-
     func sortStringBasedOnLength (array: [String]) -> [String]{
         return self.sorted{$0.characters.count > $1.characters.count}
     }
-
-
 }
+
+//40. Question: Create a function that accepts an array of unsorted numbers from 1 to 100 where zero or more numbers might be missing and returns an array of the missing numbers. 
+
+
 
 
 

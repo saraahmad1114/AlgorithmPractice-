@@ -61,6 +61,21 @@ extension Collection where Iterator.Element: Comparable {
 
 [1, 2, 3, 4].sortArrayTill(count: 3)
 
+//Another way to do the same problem 
+
+extension Collection where Iterator.Element: Comparable{
+    func sortArrayUpTo(num: Int) -> [Iterator.Element]{
+    let newArray = Array(self.sorted{$0 < $1})
+    return Array(newArray.prefix(num))
+    }
+}
+
+[1, 2, 3, 4].sortArrayUpTo(num: 3)
+
+//same result as above 
+
+
+
 
 
 

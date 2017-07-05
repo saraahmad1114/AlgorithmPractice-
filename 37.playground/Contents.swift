@@ -84,24 +84,20 @@ extension Collection where Iterator.Element == String{
 
 //40. Question: Create a function that accepts an array of unsorted numbers from 1 to 100 where zero or more numbers might be missing and returns an array of the missing numbers. 
 
-func returnMissingNumber (num1: Int, num2: Int) -> [Int]{
-
-    var array = [Int]()
+func returnArrayOfMissingNumbers(input: [Int]) -> [Int] {
+    let correctArray = Array(1...100)
+    var missingNumbers = [Int]()
     
-    for i in 0...100 {
-        if i == num1 || i == num2 {
-            print("Don't add to array")
-        }
-        else {
-            array.append(i)
+    for number in correctArray {
+        if !input.contains(number) {
+            missingNumbers.append(number)
         }
     }
     
-    return array
-
+    return missingNumbers
 }
 
-returnMissingNumber(num1: 8, num2: 9)
+
 
 
 

@@ -126,7 +126,6 @@ extension Collection where Iterator.Element == Int {
 //42. Write an extension for all collections that reimplements the index(of:) method.
 
 extension Collection where Iterator.Element: Equatable {
-
     func provideIndexOf (_ search: Iterator.Element) -> Int? {
         for (index, item) in self.enumerated() {
             if item == search {
@@ -136,6 +135,10 @@ extension Collection where Iterator.Element: Equatable {
         return nil
     }
 }
+
+//43. Create a linked list of lowercase English alphabet letters, along with a method that traverses all nodes and print their letters on a single line separated by spaces. 
+
+
 
 
 

@@ -123,14 +123,26 @@ extension Collection where Iterator.Element == Int {
 [5, 6, 7, 8, 9, 10].findMedian()
 
 
-
-
-
-
-
-
-
 //42. Write an extension for all collections that reimplements the index(of:) method.
+
+extension Collection where Iterator.Element: Equatable {
+
+    func provideIndexOf (_ search: Iterator.Element) -> Int? {
+        for (index, item) in self.enumerated() {
+            if item == search {
+                return index
+            }
+        }
+        return nil
+    }
+}
+
+
+
+
+
+
+
 
 
 

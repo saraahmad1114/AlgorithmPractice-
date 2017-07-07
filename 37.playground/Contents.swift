@@ -138,7 +138,44 @@ extension Collection where Iterator.Element: Equatable {
 
 //43. Create a linked list of lowercase English alphabet letters, along with a method that traverses all nodes and print their letters on a single line separated by spaces. 
 
+class LinkedListNode<T> {
+    var value: T
+    var next: LinkedListNode?
+    
+    init(value: T) {
+        self.value = value
+    }
+}
 
+class LinkedList<T> {
+    var start: LinkedListNode<T>?
+    
+    func printNodes() {
+        var currentNode = start
+        
+        while let node = currentNode {
+            print(node.value, terminator: " ")
+            currentNode = node.next
+        }
+    }
+}
+
+var list = LinkedList<Character>()
+var previousNode: LinkedListNode<Character>? = nil
+
+for letter in "abcdefghijklmnopqrstuvwxyz".characters {
+    let node = LinkedListNode(value: letter)
+    
+    if let predecessor = previousNode {
+        predecessor.next = node
+    } else {
+        list.start = node
+    }
+    
+    previousNode = node
+}
+
+list.printNodes()
 
 
 

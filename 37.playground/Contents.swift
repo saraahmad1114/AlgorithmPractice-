@@ -99,7 +99,38 @@ func returnArrayOfMissingNumbers(input: [Int]) -> [Int] {
 
 //41. Write an extension to collections that accepts an array of Int and returns the median average, or nil if there are no values. 
 
-//42. Write an extension for all collections that reimplements the index(of:) method. 
+extension Collection where Iterator.Element == Int {
+
+    func findMedian () -> Double? {
+        guard count != 0 else {
+            return nil
+        }
+        
+        let sorted = self.sorted()
+        let middleValue = sorted.count/2
+        
+        if sorted.count % 2 == 0 {
+            return Double(sorted[middleValue]+sorted[middleValue-1])/2
+        }
+        else {
+            return Double(sorted[middleValue])
+        }
+    }
+}
+
+[5, 6, 7, 8, 9].findMedian()
+
+[5, 6, 7, 8, 9, 10].findMedian()
+
+
+
+
+
+
+
+
+
+//42. Write an extension for all collections that reimplements the index(of:) method.
 
 
 

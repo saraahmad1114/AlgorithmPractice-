@@ -99,7 +99,7 @@ func returnArrayOfMissingNumbers(input: [Int]) -> [Int] {
 
 //41. Write an extension to collections that accepts an array of Int and returns the median average, or nil if there are no values. 
 
-
+//42. Write an extension for all collections that reimplements the index(of:) method. 
 
 
 

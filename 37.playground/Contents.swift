@@ -197,7 +197,51 @@ list.printNodes()
 
 //45. Skipped, need to do 54 in order to do 45 
 
+//46. Write an extension for all collections that implements the map() method.
 
+// extend all collections
+extension Collection {
+    // add a generic method that accepts a closure operating on our element type and returns a new type, with the whole method returning an array of that type
+    func challenge46<T>(_ transform: (Iterator.Element) throws -> T) rethrows -> [T] {
+        // create the return array
+        var returnValue = [T]()
+        
+        // loop over all our items, trying the transformation and appending it to our return
+        for item in self {
+            returnValue.append(try transform(item))
+        }
+        
+        // send back the return value
+        return returnValue
+    }
+}
+
+
+//47. Write an extension for all collections that implements the min() method. 
+
+extension Collection where Iterator.Element: Comparable {
+    
+    func findMinValue() -> Iterator.Element? {
+        
+        var lowest: Iterator.Element?
+        
+        for num in self {
+            if let unwrappedLowest = lowest {
+                if num < unwrappedLowest {
+                    lowest = num
+                }
+            } else {
+                lowest = num
+            }
+        }
+        return lowest
+    }
+}
+
+
+[1, 2, 5].findMinValue()
+
+["e", "f", "g"].findMinValue()
 
 
 

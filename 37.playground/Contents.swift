@@ -279,7 +279,7 @@ func challenge47c() -> Iterator.Element? {
     }
 }
 
-
+//48. Create a new type that models a double-ended queue using generics, or deque. You should be able to push items to the front or back, pop them from the front or the back, and get the number of items. 
 
 
 

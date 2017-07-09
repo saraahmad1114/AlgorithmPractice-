@@ -290,14 +290,65 @@ struct deque<T>{
         return array.count
     }
     
-    //adding to the back of the array 
+    //adding to the back of the array
     mutating func pushBack (obj: T){
         array.append(obj)
     }
 
+    mutating func pushFront (obj: T){
+        array.insert(obj, at: 0)
+    }
+    
+    //if the back of the array contains something, then remove it
+    mutating func popBack() -> T? {
+        return array.popLast()
+    }
+    
+    mutating func popFront() -> T? {
+        if array.isEmpty {
+            return nil
+        } else {
+            return array.removeFirst()
+        }
+    }
+}
+
+//49. Write a function that accepts a variadic array of integers and return the sum of all numbers that appear an even number of times. 
+
+func makeFrequencyDictionary(array: [Int]) -> [Int: Int]{
+
+    var counter = 0
+    var dictionary = [Int: Int]()
+    
+    for item in array {
+        if dictionary[item] != nil {
+            dictionary[item]! += 1
+        } else {
+            dictionary[item] = 1
+        }
+    }
+    return dictionary
 
 }
 
+makeFrequencyDictionary(array: [5, 5, 6])
+
+func returnTheSumOfAllNumbersThatAppearEvenNumTime (array: [Int]) -> Int {
+
+    var dictionary = makeFrequencyDictionary(array: array)
+        
+    var sum = 0
+    
+    for (key, value) in dictionary{
+        if value % 2 == 0 {
+            sum += key
+        }
+    }
+    return sum
+}
+var numbers = [1, 2, 2, 3, 3, 4]
+
+returnTheSumOfAllNumbersThatAppearEvenNumTime(array: numbers)
 
 
 

@@ -238,6 +238,22 @@ extension Collection where Iterator.Element: Comparable {
     }
 }
 
+//Another to do the same thing, without the usage of an optional variable to store the lowest or min value. Using this approach you completely eliminate the idea of an optional however what will be costly, but very minimally costly is the fact that the first value in the array or collection provided will always be considered or assessed twice. This should not be a problem because as the amount of items in the collection increases, this will essentially have no affect going forward on the code. 
+
+extension Collection where Iterator.Element: Comparable {
+
+func challenge47b() -> Iterator.Element? {
+    
+    guard var lowest = self.first else { return nil }
+    for item in self {
+        if item < lowest {
+            lowest = item
+        }
+    }
+        return lowest
+    }
+}
+
 
 [1, 2, 5].findMinValue()
 

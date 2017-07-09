@@ -145,6 +145,8 @@ class LinkedListNode<T> {
     init(value: T) {
         self.value = value
     }
+    
+
 }
 
 class LinkedList<T> {
@@ -157,6 +159,18 @@ class LinkedList<T> {
             print(node.value, terminator: " ")
             currentNode = node.next
         }
+    }
+    
+    var centerNode: LinkedListNode<T>? {
+        var slow = start
+        var fast = start
+        
+        while fast != nil && fast?.next != nil {
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+        
+        return slow
     }
 }
 
@@ -176,6 +190,10 @@ for letter in "abcdefghijklmnopqrstuvwxyz".characters {
 }
 
 list.printNodes()
+
+//44. Extend your linked list class with a new method that returns the node at the mid point of the linked list using no more than one loop. 
+
+
 
 
 

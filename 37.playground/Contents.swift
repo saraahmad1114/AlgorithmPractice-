@@ -195,6 +195,8 @@ list.printNodes()
 
 //Answer above 
 
+//45. Skipped, need to do 54 in order to do 45 
+
 
 
 

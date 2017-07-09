@@ -242,7 +242,7 @@ extension Collection where Iterator.Element: Comparable {
 
 extension Collection where Iterator.Element: Comparable {
 
-func challenge47b() -> Iterator.Element? {
+func findMinimumValue() -> Iterator.Element? {
     
     guard var lowest = self.first else { return nil }
     for item in self {
@@ -258,6 +258,28 @@ func challenge47b() -> Iterator.Element? {
 [1, 2, 5].findMinValue()
 
 ["e", "f", "g"].findMinValue()
+
+[1, 2, 5].findMinimumValue()
+
+//Fastest way to do this problem, this eliminates the need to reevaluate the first value in the collection more than once.
+
+extension Collection where Iterator.Element: Comparable {
+
+func challenge47c() -> Iterator.Element? {
+    
+    var it = makeIterator()
+    guard var lowest = it.next() else { return nil }
+    
+    while let item = it.next() {
+        if item < lowest {
+            lowest = item
+        }
+    }
+        return lowest
+    }
+}
+
+
 
 
 

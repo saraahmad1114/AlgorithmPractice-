@@ -317,14 +317,13 @@ struct deque<T>{
 
 func makeFrequencyDictionary(array: [Int]) -> [Int: Int]{
 
-    var counter = 0
     var dictionary = [Int: Int]()
     
-    for item in array {
-        if dictionary[item] != nil {
-            dictionary[item]! += 1
+    for number in array {
+        if dictionary[number] != nil {
+            dictionary[number]! += 1
         } else {
-            dictionary[item] = 1
+            dictionary[number] = 1
         }
     }
     return dictionary
@@ -336,7 +335,7 @@ makeFrequencyDictionary(array: [5, 5, 6])
 func returnTheSumOfAllNumbersThatAppearEvenNumTime (array: [Int]) -> Int {
 
     var dictionary = makeFrequencyDictionary(array: array)
-        
+    
     var sum = 0
     
     for (key, value) in dictionary{
@@ -349,6 +348,10 @@ func returnTheSumOfAllNumbersThatAppearEvenNumTime (array: [Int]) -> Int {
 var numbers = [1, 2, 2, 3, 3, 4]
 
 returnTheSumOfAllNumbersThatAppearEvenNumTime(array: numbers)
+
+returnTheSumOfAllNumbersThatAppearEvenNumTime(array: [5, 5, 5, 12, 12 ])
+
+//50. Write a function that accepts an array of positive and negative numbers and returns a closed range containing the position of the contiguous positive numbers that sum to the higest value, or nil if nothing were found.
 
 
 

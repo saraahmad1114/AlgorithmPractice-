@@ -406,10 +406,39 @@ func bubbleSort (array: [Int]) -> [Int] {
             }
         }
     
-    }while isSwapped
+    }while isSwapped == true 
     
     return result
 }
+
+bubbleSort(array: [12, 5, 4, 9, 3, 2, 1])
+
+extension Array where Element: Comparable {
+    func bubbleSort () -> [Element] {
+        
+        guard self.count > 1 else {
+            return self
+        }
+        
+        var result = self
+        let count = result.count
+        var isSwapped = false
+        
+        repeat {
+            isSwapped = false
+            for index in 1..<count {
+                if result[index] < result[index-1]{
+                    swap(&result[index], &result[index-1])
+                    isSwapped = true
+                }
+            }
+            
+        }while isSwapped == true
+        
+        return result
+    }
+}
+
 
 
 

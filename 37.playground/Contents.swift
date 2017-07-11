@@ -353,7 +353,63 @@ returnTheSumOfAllNumbersThatAppearEvenNumTime(array: [5, 5, 5, 12, 12 ])
 
 //50. Write a function that accepts an array of positive and negative numbers and returns a closed range containing the position of the contiguous positive numbers that sum to the higest value, or nil if nothing were found.
 
+func returnRange(_ numbers: [Int]) -> CountableClosedRange<Int>? {
+    // this is the return value, nil by default
+    var bestRange: CountableClosedRange<Int>? = nil
+    var bestSum = 0
+    
+    // these track the current sequence of positive integers
+    var currentStart: Int? = nil
+    var currentSum = 0
+    
+    for (index, number) in numbers.enumerated() {
+        if number > 0 {
+            // if we don't have a start for the current range, set one now
+            currentStart = currentStart ?? index
+            currentSum += number
+            
+            if currentSum > bestSum {
+                // update our best range
+                bestRange = currentStart! ... index
+                bestSum = currentSum
+            }
+        } else {
+            // reset the current range
+            currentSum = 0
+            currentStart = nil
+        }
+    }
+    
+    return bestRange
+}
 
+//55. Create an extension for arrays that sort them using the bubble sort algorithm. 
+
+//first learn how bubble sort works 
+
+func bubbleSort (array: [Int]) -> [Int] {
+
+    guard array.count > 1 else {
+        return array
+    }
+    
+    var result = array
+    let count = result.count
+    var isSwapped = false
+    
+    repeat {
+        isSwapped = false
+        for index in 1..<count {
+            if result[index] < result[index-1]{
+                swap(&result[index], &result[index-1])
+                isSwapped = true
+            }
+        }
+    
+    }while isSwapped
+    
+    return result
+}
 
 
 

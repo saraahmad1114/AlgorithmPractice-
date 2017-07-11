@@ -406,7 +406,7 @@ func bubbleSort (array: [Int]) -> [Int] {
             }
         }
     
-    }while isSwapped == true 
+    }while isSwapped == true
     
     return result
 }
@@ -414,31 +414,32 @@ func bubbleSort (array: [Int]) -> [Int] {
 bubbleSort(array: [12, 5, 4, 9, 3, 2, 1])
 
 extension Array where Element: Comparable {
-    func bubbleSort () -> [Element] {
+
+func bubbleSort() -> [Element] {
+    guard count > 0 else { return [Element]() }
+    
+    var returnValue = self
+    var highestSortedIndex = count
+    
+    repeat {
+        var lastSwapIndex = 0
         
-        guard self.count > 1 else {
-            return self
+        for index in 0 ..< highestSortedIndex - 1 {
+            let element = returnValue[index]
+            let next = returnValue[index + 1]
+            
+            if (element > next) {
+                swap(&returnValue[index], &returnValue[index + 1])
+                lastSwapIndex = index + 1
+            }
         }
         
-        var result = self
-        let count = result.count
-        var isSwapped = false
-        
-        repeat {
-            isSwapped = false
-            for index in 1..<count {
-                if result[index] < result[index-1]{
-                    swap(&result[index], &result[index-1])
-                    isSwapped = true
-                }
-            }
-            
-        }while isSwapped == true
-        
-        return result
-    }
+        highestSortedIndex = lastSwapIndex
+    } while highestSortedIndex != 0
+    
+    return returnValue
 }
-
+}
 
 
 

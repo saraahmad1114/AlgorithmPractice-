@@ -444,7 +444,42 @@ func bubbleSort() -> [Element] {
 
 //56. Create an extension for an array that sorts them using the insertion sort algorithm 
 
+//Insertion sort definitely is faster than bubble sort
 
+extension Array where Element: Comparable{
+
+    func InsertionSortWith() -> [Element]{
+    
+        guard count > 1 else {
+            return self
+        }
+        
+        var returnValue = [Element]()
+    
+        for unsorted in self {
+            if returnValue.count == 0 {
+                returnValue.append(unsorted)
+            } else {
+                var placed = false
+                
+                for (index, sorted) in returnValue.enumerated() {
+                    if unsorted < sorted {
+                        returnValue.insert(unsorted, at: index)
+                        placed = true
+                        break
+                    }
+                }
+                
+                if !placed {
+                    returnValue.append(unsorted)
+                }
+            }
+        }
+        
+        return returnValue
+    }
+
+}
 
 
 

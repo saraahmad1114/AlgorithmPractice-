@@ -476,6 +476,10 @@ extension Array where Element: Comparable{
 
 }
 
+//57. “Write a function that accepts two values and returns true if they are isomorphic. That is, each part of the value must map to precisely one other, but that might be itself.”
+
+
+
 
 
 

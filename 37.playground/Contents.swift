@@ -479,7 +479,6 @@ extension Array where Element: Comparable{
 //57. “Write a function that accepts two values and returns true if they are isomorphic. That is, each part of the value must map to precisely one other, but that might be itself.”
 
 func areTwoValuesIsomorphic ( firstValue: Any, secondValue: Any) -> Bool {
-
     let first = String(describing: firstValue)
     let second = String(describing: secondValue)
     
@@ -504,11 +503,13 @@ func areTwoValuesIsomorphic ( firstValue: Any, secondValue: Any) -> Bool {
             characterMap[character] = otherCharacter
         }
     }
-    
     return true
 }
 
 areTwoValuesIsomorphic(firstValue: "clap", secondValue: "slap")
+
+//58. “Write a function that accepts a string containing the characters (, [, {, <, >, }, ], and ) in any arrangement and frequency. It should return true if the brackets are opened and closed in the correct order, and if all brackets are closed. Any other input should false”
+
 
 
 

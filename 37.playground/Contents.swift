@@ -478,15 +478,42 @@ extension Array where Element: Comparable{
 
 //57. “Write a function that accepts two values and returns true if they are isomorphic. That is, each part of the value must map to precisely one other, but that might be itself.”
 
-func areTwoValuesIsomorphic (s1: String, s2: String) -> Bool {
+func areTwoValuesIsomorphic ( firstValue: Any, secondValue: Any) -> Bool {
 
-    if s1.characters.count != s2.characters.count {
-        return false 
+    let first = String(describing: firstValue)
+    let second = String(describing: secondValue)
+    
+    guard first.characters.count == second.characters.count else { return false }
+    
+    var characterMap = [Character: Character]()
+    let firstArray = Array(first.characters)
+    let secondArray = Array(second.characters)
+    
+    for (index, character) in firstArray.enumerated() {
+        let otherCharacter = secondArray[index]
+        
+        if let currentMapping = characterMap[character] {
+            if currentMapping != otherCharacter {
+                return false
+            }
+        } else {
+            if characterMap.values.contains(otherCharacter) {
+                return false
+            }
+            
+            characterMap[character] = otherCharacter
+        }
     }
     
-
-    return false
+    return true
 }
+
+areTwoValuesIsomorphic(firstValue: "clap", secondValue: "slap")
+
+
+
+
+
 
 
 

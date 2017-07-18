@@ -541,6 +541,8 @@ func isStringBalancedWithCharacters(input: String) -> Bool {
     return usedBrackets.count == 0
 }
 
+isStringBalancedWithCharacters(input: "([])")
+
 
 
 
